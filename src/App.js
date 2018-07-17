@@ -257,7 +257,7 @@ class App extends Component {
         const {
             state
         } = this.props;
-
+        console.log("new");
         return (
             <div className="App">
                 <Route 
