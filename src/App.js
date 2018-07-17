@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router-dom";
 
 import Welcome from "./Components/Welcome";
 import LogIn from "./Components/LogIn";
@@ -257,14 +256,14 @@ class App extends Component {
         const {
             state
         } = this.props;
-        console.log("dsasdasdas");
+        console.log("App is coming");
         return (
             <div className="App">
                 <Router>
                     <Switch>
                         <Route 
                             exact 
-                            path="/blog-live/signUp"
+                            path="https://katka44.github.io/blog-live/signUp"
 
                             render={()=>{
                                 return <LogIn 
@@ -279,7 +278,7 @@ class App extends Component {
 
                         <Route 
                             exact 
-                            path="/blog-live/"
+                            path="https://katka44.github.io/blog-live/"
 
                             render={()=>{
                                 return getUsers(state).loggedIn !== "null"
@@ -306,7 +305,7 @@ class App extends Component {
                             return (<Route 
                                 key={getUsers(state).users.indexOf(object)} 
                                 exact 
-                                path={`/blog-live/users/${object.username}`}
+                                path={`https://katka44.github.io/blog-live/users/${object.username}`}
                                 render={()=>{ 
                                     return <UserPage 
                                         username={object.username}
@@ -319,7 +318,7 @@ class App extends Component {
 
                         <Route
                             exact 
-                            path = "/blog-live/posts/newpost" 
+                            path = "https://katka44.github.io/blog-live/posts/newpost" 
                             render = {(props) => 
                                 <NewPost 
                                     title={title}
@@ -335,7 +334,7 @@ class App extends Component {
                             return (<Route 
                                 key={getPosts(state).indexOf(object)} 
                                 exact 
-                                path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
+                                path={`https://katka44.github.io/blog-live/posts/${getPosts(state).indexOf(object)}`} 
                                 render={()=>{
                                     return isEditing
                                     ? <NewPost 
