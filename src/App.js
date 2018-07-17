@@ -263,7 +263,7 @@ class App extends Component {
                     <Switch>
                         <Route 
                             exact 
-                            path="https://katka44.github.io/blog-live/signUp"
+                            path="/blog-live/signUp"
 
                             render={()=>{
                                 return <LogIn 
@@ -278,7 +278,7 @@ class App extends Component {
 
                         <Route 
                             exact 
-                            path="https://katka44.github.io/blog-live/"
+                            path="/blog-live/"
 
                             render={()=>{
                                 return getUsers(state).loggedIn !== "null"
@@ -305,7 +305,7 @@ class App extends Component {
                             return (<Route 
                                 key={getUsers(state).users.indexOf(object)} 
                                 exact 
-                                path={`https://katka44.github.io/blog-live/users/${object.username}`}
+                                path={`/blog-live/users/${object.username}`}
                                 render={()=>{ 
                                     return <UserPage 
                                         username={object.username}
@@ -318,7 +318,7 @@ class App extends Component {
 
                         <Route
                             exact 
-                            path = "https://katka44.github.io/blog-live/posts/newpost" 
+                            path = "/blog-live/posts/newpost" 
                             render = {(props) => 
                                 <NewPost 
                                     title={title}
@@ -334,7 +334,7 @@ class App extends Component {
                             return (<Route 
                                 key={getPosts(state).indexOf(object)} 
                                 exact 
-                                path={`https://katka44.github.io/blog-live/posts/${getPosts(state).indexOf(object)}`} 
+                                path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
                                 render={()=>{
                                     return isEditing
                                     ? <NewPost 
