@@ -1,0 +1,27 @@
+.postDiv {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1fr;
+    grid-template-areas: "title category icons";
+    border: 1px solid grey;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+.postDiv:hover, button:hover, .postsDiv a:hover {
+    background-color: var(--hover-color);
+}
+.iconsDiv {
+    grid-area: icons;
+	display: flex;
+	align-items: center;
+    font-size: 13px;
+}
+.iconsDiv p, .iconsDiv i {
+	width: 25%;
+	margin: 0;
+}
+.red {
+    color: red;
+}

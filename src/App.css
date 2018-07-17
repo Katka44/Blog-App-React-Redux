@@ -1,0 +1,18 @@
+:root {
+    --main-bg-color: #ECECEC;
+    --main-font-color: #341A9C;
+    --hover-color: #DBDBDB;
+    --placeholder-color: #A0A0A0;
+    --main-font: 'Titillium Web', sans-serif;
+}
+body {
+    background-color: var(--main-bg-color);
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+.App {
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    text-align: center;
+}

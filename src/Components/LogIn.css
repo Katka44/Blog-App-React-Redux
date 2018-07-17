@@ -1,0 +1,8 @@
+.loginDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.loginDiv input {
+	max-width: 200px;
+}

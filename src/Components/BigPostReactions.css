@@ -1,0 +1,16 @@
+.commentsLikes {
+    align-self: flex-end;
+    display: grid;
+    grid-template-columns: 12fr 1fr;
+    grid-area: "comment like";
+}
+.commentsLikes input {
+    border: 1px solid grey;
+    border-radius: 3px;    
+}
+.commentsLikes button {
+    width: 100%;
+}
+button.enabled {
+    color: red;
+}

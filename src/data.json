@@ -1,0 +1,370 @@
+{
+    "posts": [
+        {
+            "title": "My Day in Integrify",
+            "category": "Work",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah", "Carl", "Emily"],
+            "author" : "Alice",
+            "writtenDate" : "Thu Jul 12 2017 10:20:49 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Fred",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Hannah",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Jackie",
+                    "text": "Comment 4"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 5"
+                }
+
+            ]
+        },       
+        {
+            "title": "My Speech at React Meetup",
+            "category": "Speech",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah", "Jackie", "Ian", "Carl"],
+            "author" : "David",
+            "writtenDate" : "Thu Jul 12 2017 8:20:49 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Alice",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Fred",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Emily",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Emily",
+                    "text": "Comment 4"
+                }
+            ]
+        },       
+        {
+            "title": "Fun at the Beach",
+            "category": "Recreation",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice"],
+            "author" : "Carl",
+            "writtenDate" : "Thu Jun 12 2018 5:20:49 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "George",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Hannah",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Jackie",
+                    "text": "Comment 4"
+                }
+            ]
+        },
+        {
+            "title": "My Latest Project",
+            "category": "Work",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Emily", "George", "David", "Hannah"],
+            "author" : "Becky",
+            "writtenDate" : "Thu Apr 23 2018 3:49:09 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Alice",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Hannah",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 4"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 5"
+                },
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 6"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 7"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 8"
+                }
+            ]
+        },       
+        {
+            "title": "Learning Redux",
+            "category": "Work",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah", "Fred"],
+            "author" : "Carl",
+            "writtenDate" : "Thu Mar 9 2018 2:08:01 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Ian",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 2"
+                }
+            ]
+        },       
+        {
+            "title": "Trip to Toronto",
+            "category": "Recreation",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "Hannah", "Fred"],
+            "author" : "George",
+            "writtenDate" : "Thu Mar 9 2018 15:12:07 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "George",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "David",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "George",
+                    "text": "Comment 4"
+                },
+                {   
+                    "author" : "David",
+                    "text": "Comment 5"
+                }
+            ]
+        },
+        {
+            "title": "Happy New Year",
+            "category": "Holidays",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["George", "David", "Hannah"],
+            "author" : "Jackie",
+            "writtenDate" : "Thu Mar 9 2018 20:35:56 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Jackie",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Jackie",
+                    "text": "Comment 4"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 5"
+                }
+            ]
+        },       
+        {
+            "title": "How to Build a Business",
+            "category": "Business",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "David", "Hannah", "Ian", "Becky"],
+            "author" : "David",
+            "writtenDate" : "Thu May 9 2018 5:05:04 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Carl",
+                    "text": "Comment 3"
+                },
+                {   
+                    "author" : "Fred",
+                    "text": "Comment 4"
+                }
+            ]
+        },       
+        {
+            "title": "Motivational Speech",
+            "category": "Speech",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah", "Ian"],
+            "author" : "George",
+            "writtenDate" : "Thu Feb 12 2018 18:36:44 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Alice",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Hannah",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Emily",
+                    "text": "Comment 3"
+                }
+            ]            
+        },
+        {
+            "title": "Volatility Trading Is a Problem",
+            "category": "Finance",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "Hannah"],
+            "author" : "Hannah",
+            "writtenDate" : "Thu Jan 30 2018 11:36:04 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Fred",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Hannah",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "Ian",
+                    "text": "Comment 3"
+                }
+            ]             
+        },       
+        {
+            "title": "Technology in Healthcare",
+            "category": "Technology",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah", "Emily"],
+            "author" : "Ian",
+            "writtenDate" : "Thu Sep 30 2017 23:21:54 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Becky",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Ian",
+                    "text": "Comment 2"
+                }
+            ]              
+        },       
+        {
+            "title": "What is the Secret to Successful Blogging?",
+            "category": "Blog",
+            "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
+            "likedBy": ["Alice", "George", "David", "Hannah"],
+            "author" : "Alice",
+            "writtenDate" : "Thu Jan 1 2018 9:01:29 GMT+0300 (Eastern European Summer Time)",
+            "comments" : [
+                {   
+                    "author" : "Fred",
+                    "text": "Comment 1"
+                },
+                {   
+                    "author" : "Alice",
+                    "text": "Comment 2"
+                },
+                {   
+                    "author" : "George",
+                    "text": "Comment 3"
+                }
+            ]  
+        }    
+    ],
+    "users" : [
+        {
+            "username": "Alice",
+            "password": "Alice",
+            "favorites": ["Carl", "David", "Jackie"]
+        },
+        {
+            "username": "Becky",
+            "password": "Becky",
+            "favorites": ["Emily"]
+        },
+        {
+            "username": "Carl",
+            "password": "Carl",
+            "favorites": ["George", "Becky", "Alice"]
+        },
+        {
+            "username": "David",
+            "password": "David",
+            "favorites": ["Fred"]
+        },
+        {
+            "username": "Emily",
+            "password": "Emily",
+            "favorites": ["Becky", "David"]
+        },
+        {
+            "username": "Fred",
+            "password": "Fred",
+            "favorites": ["Hannh", "Carl", "Ian"]
+        },
+        {
+            "username": "George",
+            "password": "George",
+            "favorites": ["Ian", "David", "George"]
+        },
+        {
+            "username": "Hannah",
+            "password": "Hannah",
+            "favorites": ["Emily"]
+        },
+        {
+            "username": "Ian",
+            "password": "Ian",
+            "favorites": ["Fred"]
+        },
+        {
+            "username": "Jackie",
+            "password": "Jackie",
+            "favorites": []
+        }
+    ],
+    "loggedIn" : "null"
+}

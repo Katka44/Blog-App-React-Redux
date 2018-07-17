@@ -1,0 +1,18 @@
+.sideDiv {
+    padding-left: 8%;
+}
+.sideDiv p {
+    text-align: left;
+}
+.mainDiv {
+    width: 100%;
+    margin: 0;
+    align-self: start;
+}
+.indented {
+    margin: 0;
+    margin-left: 15px;
+}
+.pointer {
+	cursor: pointer;
+}

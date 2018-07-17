@@ -1,0 +1,14 @@
+.userPage {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-areas: 
+    "header header header"
+    "left posts right";
+}
+h3 {
+    grid-area: header;
+}
+.posts {
+    grid-area: posts;
+}

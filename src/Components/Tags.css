@@ -1,0 +1,12 @@
+.tagDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tagDiv p {
+    margin: 0;
+    margin-left: 15px;
+}
+.tag {
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+form {
+    margin: auto;
+    width: 70%;
+    text-align: left;
+    color: var(--main-font-color);
+    padding: 0;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+input, textarea {
+    background-color: transparent;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 3px;
+    color: var(--main-font-color);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+input::placeholder {
+    color: var(--placeholder-color);
+}
+textarea {
+    resize: none;
+    width: 100%;
+    font-family: var(--main-font);
+    box-sizing: border-box;
+}

@@ -1,0 +1,27 @@
+.bigPostContentDiv {
+    padding-top: 50px;
+    align-items: right;
+}
+.bigPostContentDiv p {
+    margin-top: 30;
+}
+.commentsLikesCount {
+    align-self: right;
+    width: 15%;
+    margin-left: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: right;
+}
+.commentsLikesCount i, .commentsLikesCount p {
+    margin: 0;
+}
+.red {
+    color: red;
+}
+.postBody {
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 3px;
+}
