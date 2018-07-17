@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { createStore } from "redux";
@@ -8,6 +8,10 @@ import { Provider } from "react-redux";
 import registerServiceWorker from "./registerServiceWorker";
 
 import { rootReducer } from "./reducers/index.js";
+
+import createHashHistory from 'history/createHashHistory';
+
+const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
 const store = createStore(
 	rootReducer,
@@ -17,9 +21,9 @@ const store = createStore(
 ReactDOM.render(
 
   <Provider store={store}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router history={hashHistory}>
       <App />
-    </BrowserRouter>
+    </Router>
   </Provider>
 
   , document.getElementById("root"));
