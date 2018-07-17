@@ -262,7 +262,7 @@ class App extends Component {
             <div className="App">
                 <Route 
                     exact 
-                    path="/blog-live/signUp"
+                    path="/signUp"
 
                     render={()=>{
                         return <LogIn 
@@ -277,7 +277,7 @@ class App extends Component {
 
                 <Route 
                     exact 
-                    path="/blog-live/"
+                    path="/"
 
                     render={()=>{
                         return getUsers(state).loggedIn !== "null"
@@ -304,7 +304,7 @@ class App extends Component {
                     return (<Route 
                         key={getUsers(state).users.indexOf(object)} 
                         exact 
-                        path={`/blog-live/users/${object.username}`}
+                        path={`/users/${object.username}`}
                         render={()=>{ 
                             return <UserPage 
                                 username={object.username}
@@ -317,7 +317,7 @@ class App extends Component {
 
                 <Route
                     exact 
-                    path={"/blog-live/posts/newpost"}
+                    path={"/posts/newpost"}
                     render = {(props) => 
                         <NewPost 
                             title={title}
@@ -333,7 +333,7 @@ class App extends Component {
                     return (<Route 
                         key={getPosts(state).indexOf(object)} 
                         exact 
-                        path={`/blog-live/posts/${getPosts(state).indexOf(object)}`}
+                        path={`/posts/${getPosts(state).indexOf(object)}`}
                         render={()=>{
                             return isEditing
                             ? <NewPost 
