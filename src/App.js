@@ -256,10 +256,9 @@ class App extends Component {
         const {
             state
         } = this.props;
-        console.log("App is coming");
         return (
             <div className="App">
-                <Router>
+                <Router>xasxsaxsa
                     <Switch>
                         <Route 
                             exact 
