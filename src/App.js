@@ -104,7 +104,7 @@ class App extends Component {
     }
 
     goToSignUp = () => {
-        this.props.history.push("/signUp");
+        this.props.history.push("/blog-live/signUp");
     }
 
     handleSignUp = () => {
@@ -114,7 +114,7 @@ class App extends Component {
                 "password": this.state.password,
                 "favorites": []
             });
-            this.props.history.push("/");
+            this.props.history.push("/blog-live/");
         } else {
             window.alert("Please enter username and password.");
         }
@@ -166,7 +166,7 @@ class App extends Component {
                 }
             )
         this.handleResetPost();
-        this.props.history.push("/");
+        this.props.history.push("/blog-live/");
     }
 
     handleFilter = (filter) => {
@@ -237,7 +237,7 @@ class App extends Component {
     handleDelete = (index, cat) => {
         if (window.confirm("Are you sure?")) {
             this.props.deletePost({index, cat});
-            this.props.history.push("/");
+            this.props.history.push("/blog-live/");
         };
     }
 
@@ -258,7 +258,7 @@ class App extends Component {
         } = this.props;
         return (
             <div className="App">
-                <Router>xasxsaxsa
+                <Router>
                     <Switch>
                         <Route 
                             exact 

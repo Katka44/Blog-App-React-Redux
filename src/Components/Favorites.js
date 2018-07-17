@@ -24,7 +24,7 @@ const Favorites = (props) => {
             return <Link 
                 key={index} 
                 exact 
-                to={`/users/${name}`}>
+                to={`/blog-live/users/${name}`}>
                 <p 
                     key={index} 
                     title={`See ${name}'s profile`}

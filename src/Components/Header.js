@@ -12,7 +12,7 @@ const Header = (props) => {
 
     return (
         <header>
-            <p className="username" title="Profile"><Link exact to={`/users/${users.loggedIn}`}>{users.loggedIn}</Link></p>
+            <p className="username" title="Profile"><Link exact to={`/blog-live/users/${users.loggedIn}`}>{users.loggedIn}</Link></p>
             <p onClick={handleLogOut} >Log Out</p>
         </header>
     );
