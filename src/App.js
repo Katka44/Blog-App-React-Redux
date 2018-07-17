@@ -261,6 +261,7 @@ class App extends Component {
         return (
             <div className="App">
                 <h1>asfdsadsa</h1>
+                <h1>asfdsadsa</h1>
                 <Route 
                     exact 
                     path="/blog-live/signUp"
