@@ -260,7 +260,6 @@ class App extends Component {
 
         return (
             <div className="App">
-                <h1>header</h1>
                 <Route 
                     exact 
                     path={process.env.PUBLIC_URL + "/signUp" }
