@@ -259,6 +259,7 @@ class App extends Component {
         console.log("App is coming");
         return (
             <div className="App">
+                <h1>header</h1>
                 <Router>
                     <Switch>
                         <Route 
