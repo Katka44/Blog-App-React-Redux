@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
 import Welcome from "./Components/Welcome";
@@ -257,116 +257,119 @@ class App extends Component {
         const {
             state
         } = this.props;
-
+        console.log("dsasdasdas");
         return (
             <div className="App">
- 
-                <Route 
-                    exact 
-                    path="/blog-live/signUp"
+                <Router>
+                    <Switch>
+                        <Route 
+                            exact 
+                            path="/blog-live/signUp"
 
-                    render={()=>{
-                        return <LogIn 
-                            title="Please Sign Up"
-                            username={username}
-                            password={password}
-                            handleChange={this.handleChange}
-                            handleLogIn={this.handleSignUp}
-                            buttonText="Sign Up" />
-                        }} 
-                    />
+                            render={()=>{
+                                return <LogIn 
+                                    title="Please Sign Up"
+                                    username={username}
+                                    password={password}
+                                    handleChange={this.handleChange}
+                                    handleLogIn={this.handleSignUp}
+                                    buttonText="Sign Up" />
+                                }} 
+                            />
 
-                <Route 
-                    exact 
-                    path="/blog-live/"
+                        <Route 
+                            exact 
+                            path="/blog-live/"
 
-                    render={()=>{
-                        return getUsers(state).loggedIn !== "null"
-                        ? <Posts 
-                            makeSmallPost={this.makeSmallPost}
-                            filter={filter}
-                            handleFilter={this.handleFilter}
-                            handleSorting={this.handleSorting}
-                            handleLogOut={this.handleLogOut} 
-                            handleLatest={this.handleLatest} />
-                        : <Welcome 
-                            makeSmallPost={this.makeSmallPost}
-                            handleSort={this.handleSort}
-                            username={username}
-                            password={password}
-                            handleChange={this.handleChange}
-                            handleLogIn={this.handleLogIn}
-                            clearLogin={this.clearLogin}
-                            goToSignUp={this.goToSignUp} />
-                        }} 
-                    />
+                            render={()=>{
+                                return getUsers(state).loggedIn !== "null"
+                                ? <Posts 
+                                    makeSmallPost={this.makeSmallPost}
+                                    filter={filter}
+                                    handleFilter={this.handleFilter}
+                                    handleSorting={this.handleSorting}
+                                    handleLogOut={this.handleLogOut} 
+                                    handleLatest={this.handleLatest} />
+                                : <Welcome 
+                                    makeSmallPost={this.makeSmallPost}
+                                    handleSort={this.handleSort}
+                                    username={username}
+                                    password={password}
+                                    handleChange={this.handleChange}
+                                    handleLogIn={this.handleLogIn}
+                                    clearLogin={this.clearLogin}
+                                    goToSignUp={this.goToSignUp} />
+                                }} 
+                            />
 
-                {state.users.users.map(object => {
-                    return (<Route 
-                        key={getUsers(state).users.indexOf(object)} 
-                        exact 
-                        path={`/blog-live/users/${object.username}`}
-                        render={()=>{ 
-                            return <UserPage 
-                                username={object.username}
-                                posts={getPosts(state)}
-                                handleSort={this.handleSort}
-                            /> 
-                        }} 
-                    />)
-                })}
+                        {state.users.users.map(object => {
+                            return (<Route 
+                                key={getUsers(state).users.indexOf(object)} 
+                                exact 
+                                path={`/blog-live/users/${object.username}`}
+                                render={()=>{ 
+                                    return <UserPage 
+                                        username={object.username}
+                                        posts={getPosts(state)}
+                                        handleSort={this.handleSort}
+                                    /> 
+                                }} 
+                            />)
+                        })}
 
-                <Route
-                    exact 
-                    path = "/blog-live/posts/newpost" 
-                    render = {(props) => 
-                        <NewPost 
-                            title={title}
-                            category={category}
-                            text={text}
-                            handleSave={this.handleSave}
-                            handleResetPost={this.handleResetPost}
-                            handleChange={this.handleChange}
+                        <Route
+                            exact 
+                            path = "/blog-live/posts/newpost" 
+                            render = {(props) => 
+                                <NewPost 
+                                    title={title}
+                                    category={category}
+                                    text={text}
+                                    handleSave={this.handleSave}
+                                    handleResetPost={this.handleResetPost}
+                                    handleChange={this.handleChange}
+                                />
+                            }
                         />
-                    }
-                />
-                {getPosts(state).map(object => {
-                    return (<Route 
-                        key={getPosts(state).indexOf(object)} 
-                        exact 
-                        path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
-                        render={()=>{
-                            return isEditing
-                            ? <NewPost 
-                                index={getPosts(state).indexOf(object)}
-                                title={title}
-                                category={category}
-                                text={text}
-                                handleSave={this.handleSave}
-                                handleResetPost={this.handleResetPost}
-                                handleChange={this.handleChange}
-                            />
-                            : <BigPost 
-                                index={getPosts(state).indexOf(object)}
-                                title={object.title}
-                                category={object.category}
-                                text={object.text}
-                                comment={comment}
-                                author={object.author}
-                                likedBy={object.likedBy}
-                                comments={object.comments}
-                                handleEdit={this.handleEdit}
-                                handleChange={this.handleChange}
-                                handleCommentSubmit={this.handleCommentSubmit}
-                                clearBigPostInputs={this.clearBigPostInputs}
-                                clearComment={this.clearComment}
-                                handleDelete={this.handleDelete}
-                                writtenDate={object.writtenDate}
-                            />
-                            }} 
-                        />)
-                    })
-                }
+                        {getPosts(state).map(object => {
+                            return (<Route 
+                                key={getPosts(state).indexOf(object)} 
+                                exact 
+                                path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
+                                render={()=>{
+                                    return isEditing
+                                    ? <NewPost 
+                                        index={getPosts(state).indexOf(object)}
+                                        title={title}
+                                        category={category}
+                                        text={text}
+                                        handleSave={this.handleSave}
+                                        handleResetPost={this.handleResetPost}
+                                        handleChange={this.handleChange}
+                                    />
+                                    : <BigPost 
+                                        index={getPosts(state).indexOf(object)}
+                                        title={object.title}
+                                        category={object.category}
+                                        text={object.text}
+                                        comment={comment}
+                                        author={object.author}
+                                        likedBy={object.likedBy}
+                                        comments={object.comments}
+                                        handleEdit={this.handleEdit}
+                                        handleChange={this.handleChange}
+                                        handleCommentSubmit={this.handleCommentSubmit}
+                                        clearBigPostInputs={this.clearBigPostInputs}
+                                        clearComment={this.clearComment}
+                                        handleDelete={this.handleDelete}
+                                        writtenDate={object.writtenDate}
+                                    />
+                                    }} 
+                                />)
+                            })
+                        }
+                    </Switch>
+                </Router>
             </div>
         );
     }
@@ -401,7 +404,7 @@ App.propTypes = {
     logOut: PropTypes.func
 };
 
-export default withRouter(connect(
+export default connect(
     mapStateToProps, 
     mapDispatchToProps
-)(App));
+)(App);
