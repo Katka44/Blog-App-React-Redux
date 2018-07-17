@@ -259,7 +259,6 @@ class App extends Component {
         console.log("App is coming");
         return (
             <div className="App">
-
                 <Router>
                     <Switch>
                         <Route 
