@@ -9,10 +9,6 @@ import registerServiceWorker from "./registerServiceWorker";
 
 import { rootReducer } from "./reducers/index.js";
 
-import createHashHistory from 'history/createHashHistory';
-
-const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
-
 const store = createStore(
 	rootReducer,
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -21,7 +17,7 @@ const store = createStore(
 ReactDOM.render(
 
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router>
       <App />
     </Router>
   </Provider>
