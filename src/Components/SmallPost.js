@@ -16,9 +16,20 @@ const SmallPost = (props) => {
             alt
         } = props;
 
+    const importAll = r => {
+        let images = {};
+
+        r.keys().forEach((item, index) => {
+            images[item.replace("./", "")] = r(item);
+        });
+        return images;
+    };
+
+    const images = importAll(require.context("../assets", false, /.jpg/));
+
     return (
         <Link exact to={`/blog-live/posts/${index}`} >
-            <img src={src} alt={alt}/>
+            <img src={images[src]} alt={alt}/>
             <div className="postDiv">
 
                 <h3>{title}</h3>

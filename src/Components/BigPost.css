@@ -4,7 +4,7 @@
     text-align: left; 
 }
 .bigPostDiv a {
-    color: var(--main-font-color);;
+    color: var(--main-font-color);
     text-decoration: none;
     width: 100%;
     display: block;

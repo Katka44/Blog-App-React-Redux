@@ -5,10 +5,10 @@ const Footer = (props) => {
     return (
         <footer>
             <div className="social">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-linkedin-in"></i>
+                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-twitter"></i>
+                <i className="fab fa-google-plus-g"></i>
+                <i className="fab fa-linkedin-in"></i>
             </div>
             <div className="copyright">
                 <small>© 2018 Talking Tech. All rights reserved.</small>

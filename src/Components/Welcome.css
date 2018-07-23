@@ -2,7 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     grid-column-gap: 20px;
-    grid-template-areas: "left main right";
+    grid-template-areas: 
+    "img img img"
+    "left main right";
 }
 
 .mainDiv {

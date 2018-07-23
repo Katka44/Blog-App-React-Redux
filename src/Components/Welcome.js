@@ -22,6 +22,7 @@ const Welcome = (props) => {
 
     return (
         <div className="wrapperDiv">
+            <Banner />
             <div className="mainDiv">
             {/*
                 <h1>Welcome</h1>
@@ -35,7 +36,6 @@ const Welcome = (props) => {
                 <p className="smallText">Don't have an account? <span onClick={goToSignUp}>Sign up</span></p>
 
             */}
-                <Banner />
                 <div className="postsWrapper">{makeSmallPost(handleSort(posts, "writtenDate").slice(0, 6))}</div>
             </div>
         </div>

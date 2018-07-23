@@ -56,7 +56,7 @@ class App extends Component {
                 commentsCount={object.comments.length}
                 likedBy={object.likedBy}
                 loggedIn={getUsers(state).loggedIn}
-                src={path + object.image}
+                src={object.image}
                 alt={object.alt}
             />
         });
