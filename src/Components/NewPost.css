@@ -10,11 +10,13 @@ form {
     flex-direction: column;
     width: 200px;
 }
+input {
+    min-width: 300px;
+}
 input, textarea {
     background-color: transparent;
     border: 1px solid grey;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 10px;
     color: var(--main-font-color);
     outline: none;
     margin-top: 10px;

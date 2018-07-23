@@ -32,7 +32,11 @@ class App extends Component {
         this.state = {
             title: "",
             category: "",
-            text: "",
+            headline: "",
+            subtitle: "",
+            punchline: "",
+            textBeginning: "",
+            textEnd: "",
             comment: "",
             username: "",
             password: "",
@@ -89,7 +93,11 @@ class App extends Component {
         this.setState({
             title: getPosts(state)[index].title,
             category: getPosts(state)[index].category,
-            text: getPosts(state)[index].text
+            headline: getPosts(state)[index].headline,
+            subtitle: getPosts(state)[index].subtitle,
+            punchline: getPosts(state)[index].punchline,
+            textBeginning: getPosts(state)[index].textBeginning,
+            textEnd: getPosts(state)[index].textEnd
         });
     }
 
@@ -97,7 +105,11 @@ class App extends Component {
         this.setState({
             title: "",
             category: "",
-            text: "",
+            headline: "",
+            subtitle: "",
+            punchline: "",
+            textBeginning: "",
+            textEnd: "",
             comment: ""
         });
     }
@@ -143,7 +155,11 @@ class App extends Component {
         const {
             title,
             category,
-            text,
+            headline,
+            subtitle,
+            punchline,
+            textBeginning,
+            textEnd,
             isEditing
         } = this.state;
         
@@ -153,22 +169,34 @@ class App extends Component {
                     index: index,
                     title: title,
                     category: category,
-                    text: text,
+                    headline: headline,
+                    subtitle: subtitle,
+                    punchline: punchline,
+                    textBeginning: textBeginning,
+                    textEnd: textEnd,
                     likedBy: getPosts(state)[index].likedBy,
                     comments: getPosts(state)[index].comments,
                     author: getUsers(state).loggedIn,
-                    writtenDate: getPosts(state)[index].writtenDate
+                    writtenDate: getPosts(state)[index].writtenDate,
+                    image: getPosts(state)[index].image,
+                    alt: getPosts(state)[index].alt
                 }
             )
             : addPost(
                 {
                     title: title,
                     category: category,
-                    text: text,
+                    headline: headline,
+                    subtitle: subtitle,
+                    punchline: punchline,
+                    textBeginning: textBeginning,
+                    textEnd: textEnd,
                     likedBy: [],
                     comments: [],
                     author: getUsers(state).loggedIn,
-                    writtenDate: new Date().toString()
+                    writtenDate: new Date().toString(),
+                    image: "",
+                    alt: ""
                 }
             )
         this.handleResetPost();
@@ -251,7 +279,11 @@ class App extends Component {
         const {
             title,
             category,
-            text,
+            headline,
+            subtitle,
+            punchline,
+            textBeginning,
+            textEnd,
             comment,
             username,
             password,
@@ -330,7 +362,11 @@ class App extends Component {
                         <NewPost 
                             title={title}
                             category={category}
-                            text={text}
+                            headline={headline}
+                            subtitle={subtitle}
+                            punchline={punchline}
+                            textBeginning={textBeginning}
+                            textEnd={textEnd}
                             handleSave={this.handleSave}
                             handleResetPost={this.handleResetPost}
                             handleChange={this.handleChange}
@@ -348,7 +384,11 @@ class App extends Component {
                                 index={getPosts(state).indexOf(object)}
                                 title={title}
                                 category={category}
-                                text={text}
+                                headline={headline}
+                                subtitle={subtitle}
+                                punchline={punchline}
+                                textBeginning={textBeginning}
+                                textEnd={textEnd}
                                 handleSave={this.handleSave}
                                 handleResetPost={this.handleResetPost}
                                 handleChange={this.handleChange}

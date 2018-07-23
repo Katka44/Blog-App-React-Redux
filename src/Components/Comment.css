@@ -1,6 +1,5 @@
 .commentText {
-    padding: 5px;
-    border-radius: 3px;
+    font-size: 1em;
 }
 .commentText span {
     font-weight: bold;

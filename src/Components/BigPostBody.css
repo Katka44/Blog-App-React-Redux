@@ -1,11 +1,9 @@
 .bigPostContentDiv {
     align-items: right;
 }
-.bigPostContentDiv p {
-    margin-top: 30px;
-}
 .writtenBy {
     display: flex;
+    margin: 0;
 }
 .commentsLikesCount {
     align-self: right;
@@ -26,15 +24,23 @@
 .postBody {
     padding: 5px;
 }
+.postBody img {
+    margin: 20px 0 20px 0;
+}
 .subtitle {
     font-weight: bold;
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 .titleP {
     font-size: 2em;
+    margin: 15px 0 15px 0;
 }
 .punchline {
     padding: 0 15px 0 15px;
     border-left: 2px solid lightblue;
-    font-size: 1.3em;
+    font-size: 1.4em;
+}
+.text {
+    font-size: 1.1em;
 }

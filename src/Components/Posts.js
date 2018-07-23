@@ -33,6 +33,8 @@ const Posts = (props) => {
 
     return (
         <div className="wrapperDiv">
+
+        {/* 
             <Side
                 posts={getPosts(state)}
                 users={getUsers(state)}
@@ -42,13 +44,15 @@ const Posts = (props) => {
                 handleLatest={handleLatest}
                 handleFilter={handleFilter}  />
 
+        */}
+
             <div className="mainDiv">
                 <Button         
                     isLink="true"
                     to="/blog-live/posts/newpost"
                     text="Add Post" />
 
-                {makeSmallPost(makeFilteredArray(getPosts(state), filter))}
+                <div className="postsWrapper">{makeSmallPost(makeFilteredArray(getPosts(state), filter))}</div>
             </div>
         </div>
     );

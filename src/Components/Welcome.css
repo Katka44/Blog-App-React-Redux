@@ -1,6 +1,8 @@
 .wrapperDiv {
+    width: 70%;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 7fr 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 20px;
     grid-template-areas: 
     "img img img"
@@ -11,6 +13,7 @@
     width: 100%;
     margin: auto;
     grid-area: main;
+    padding-bottom: var(--welcome-page-grid-gap);
 }
 .smallText {
     font-size: 13px;
@@ -20,7 +23,7 @@
     cursor: pointer;
 }
 .postsWrapper {
-    margin-top: 50px;
+    margin-top: var(--welcome-page-grid-gap);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: var(--welcome-page-grid-gap);

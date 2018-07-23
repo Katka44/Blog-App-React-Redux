@@ -1,7 +1,8 @@
 .bigPostDiv {
     margin: auto;
     width: 70%;
-    text-align: left; 
+    text-align: left;
+    margin-bottom: 30px;
 }
 .bigPostDiv a {
     color: var(--main-font-color);
@@ -11,5 +12,5 @@
 }
 .bigPostInnerDiv {
 	border: 1px solid var(--light-grey-color);
-	padding: 50px;
+	padding: 70px;
 }

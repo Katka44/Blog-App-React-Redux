@@ -44,9 +44,9 @@ const BigPostBody = (props) => {
                 <p className="titleP">{title}</p>
                 <p className="subtitle">{subtitle}</p>
                 <img src={images[src]} alt={alt}/>
-                <p>{textBeginning}</p>
+                <p className="text">{textBeginning}</p>
                 <p className="punchline">"{punchline}"</p>
-                <p>{textEnd}</p>
+                <p className="text">{textEnd}</p>
             </div>
             <div className="commentsLikesCount">
                 <i className="far fa-comment"></i>

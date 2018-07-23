@@ -21,6 +21,10 @@ header {
     margin: 0 10px 0 0;
     font-size: 20px;
 }
+.navigation a {
+    color: var(--main-bg-color);
+    width: auto;
+}
 .socialTop {
     width: 100%;
     display: grid;
@@ -38,6 +42,7 @@ header {
     width: 40px;
     border-radius: 50%;
     align-self: end;
+    cursor: pointer;
 }
 .navigation, .socialTop, .avatar {
     margin-bottom: 10px;

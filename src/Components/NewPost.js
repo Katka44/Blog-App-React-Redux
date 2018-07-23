@@ -9,7 +9,13 @@ const NewPost = (props) => {
         index,
         title,
         category,
-        text,
+        headline,
+        subtitle,
+        punchline,
+        textBeginning,
+        textEnd,
+        image,
+        alt,
         handleSave,
         handleResetPost,
         handleChange
@@ -20,21 +26,43 @@ const NewPost = (props) => {
             <div className="inputDiv">
                 <input
                     name="title"
-                    placeholder="title"
+                    placeholder="Title"
                     onChange={handleChange}
                     value={title} />
                 <input 
                     name="category"
-                    placeholder="category"
+                    placeholder="Category"
                     onChange={handleChange}
                     value={category} />
+                <input
+                    name="headline"
+                    placeholder="Headline"
+                    onChange={handleChange}
+                    value={headline} />
+                <input
+                    name="subtitle"
+                    placeholder="Subtitle"
+                    onChange={handleChange}
+                    value={subtitle} />
             </div>
             <textarea 
-                name="text" 
+                name="textBeginning" 
                 rows="10"
+                placeholder="Top half of your post."
                 onChange={handleChange}
-                value={text} ></textarea>
-            {(title.trim() === "" || category.trim() === "" || text.trim() === "")
+                value={textBeginning} ></textarea>
+            <input
+                    name="punchline"
+                    placeholder="Quote"
+                    onChange={handleChange}
+                    value={punchline} />
+            <textarea 
+                name="textEnd" 
+                rows="10"
+                placeholder="Bottom half of your post."
+                onChange={handleChange}
+                value={textEnd} ></textarea>
+            {(title.trim() === "" || category.trim() === "" || textBeginning.trim() === "" || textEnd.trim() === "")
                 ? <button 
                 type="button" 
                 onClick={() => window.alert("Please fill all the fields.")}>Save</button>

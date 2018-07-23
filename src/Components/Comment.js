@@ -22,7 +22,6 @@ const Comment = (props) => {
                             {author}
                     </Link>
                 </span> 
-                
             </p>
         </div>
     );

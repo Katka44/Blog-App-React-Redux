@@ -5,8 +5,7 @@
     grid-area: "comment like";
 }
 .commentsLikes input {
-    border: 1px solid grey;
-    border-radius: 3px;    
+    border: 1px solid var(--light-grey-color);
 }
 .commentsLikes button {
     width: 100%;
