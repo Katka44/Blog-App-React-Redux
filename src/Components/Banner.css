@@ -5,7 +5,7 @@
     grid-template-areas: 
     "nav nav nav nav nav social avatar"
     "top top top top top top top"
-    "left left text text right right right"
+    "left left text text text right right"
     "bottom bottom bottom bottom bottom bottom bottom";
 }
 .bannerImg {
@@ -27,6 +27,7 @@
     margin: 0;
 }
 .slimFont {
+    font-family: var(--header-font);
     font-size: 25px;
     margin: 0;
 }

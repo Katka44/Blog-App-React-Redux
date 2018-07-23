@@ -1,5 +1,5 @@
 import React from "react";
-import Banner from "./Banner";
+import avatar from "../assets/avatars.jpg";
 import "./Header.css";
 
 const Header = (props) => {
@@ -20,9 +20,8 @@ const Header = (props) => {
                 <i class="fab fa-linkedin-in"></i>
             </div>
             <div className="avatar">
-                <img src="../assets/avatars.jpg" />
+                <img src={avatar} alt="profile avatar" />
             </div> 
-            <Banner />
         </header>
     );
 }

@@ -2,10 +2,6 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = (props) => {
-    const {
-
-        } = props;
-
     return (
         <footer>
             <div className="social">
