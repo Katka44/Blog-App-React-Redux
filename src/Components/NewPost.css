@@ -4,6 +4,7 @@ form {
     text-align: left;
     color: var(--main-font-color);
     padding: 0;
+    padding-top: 50px;
 }
 .inputDiv {
     display: flex;

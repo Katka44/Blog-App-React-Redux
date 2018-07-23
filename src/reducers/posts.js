@@ -26,7 +26,6 @@ const postsReducer = (store = posts, action) => {
                 };
             const newStore = [...store];
             newStore[action.payload.index] = newObject;
-            console.log("likedby", action.payload.likedBy.length);
             return newStore;
 
         case DELETE_POST:
