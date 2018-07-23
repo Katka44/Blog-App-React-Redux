@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.6208438b.css",
-  "main.css.map": "static/css/main.6208438b.css.map",
-  "main.js": "static/js/main.5b7cc056.js",
-  "main.js.map": "static/js/main.5b7cc056.js.map",
+  "main.css": "static/css/main.03bd0590.css",
+  "main.css.map": "static/css/main.03bd0590.css.map",
+  "main.js": "static/js/main.980f4514.js",
+  "main.js.map": "static/js/main.980f4514.js.map",
   "static\\media\\aeromobil.jpg": "static/media/aeromobil.0e8f28cd.jpg",
   "static\\media\\avatar.jpg": "static/media/avatar.fb1d4b87.jpg",
   "static\\media\\avatars.jpg": "static/media/avatars.a1f57b68.jpg",
@@ -17,5 +17,6 @@
   "static\\media\\open-hard-disk-drive.jpg": "static/media/open-hard-disk-drive.6deb8b41.jpg",
   "static\\media\\silence.jpg": "static/media/silence.d12d68dd.jpg",
   "static\\media\\skyscrapers.jpg": "static/media/skyscrapers.6c0551b6.jpg",
+  "static\\media\\smart-city.jpg": "static/media/smart-city.ed66aa34.jpg",
   "static\\media\\tunnel.jpg": "static/media/tunnel.2527d3e4.jpg"
 }
