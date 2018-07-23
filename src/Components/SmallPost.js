@@ -17,7 +17,7 @@ const SmallPost = (props) => {
         } = props;
 
     return (
-        <Link exact to={`/posts/${index}`} >
+        <Link exact to={`/blog-live/posts/${index}`} >
             <img src={src} alt={alt}/>
             <div className="postDiv">
 

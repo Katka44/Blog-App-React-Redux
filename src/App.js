@@ -111,7 +111,7 @@ class App extends Component {
     }
 
     goToSignUp = () => {
-        this.props.history.push("/signUp");
+        this.props.history.push("/blog-live/signUp");
     }
 
     handleSignUp = () => {
@@ -121,7 +121,7 @@ class App extends Component {
                 "password": this.state.password,
                 "favorites": []
             });
-            this.props.history.push("/");
+            this.props.history.push("/blog-live/");
         } else {
             window.alert("Please enter username and password.");
         }
@@ -173,7 +173,7 @@ class App extends Component {
                 }
             )
         this.handleResetPost();
-        this.props.history.push("/");
+        this.props.history.push("/blog-live/");
     }
 
     handleFilter = (filter) => {
@@ -244,7 +244,7 @@ class App extends Component {
     handleDelete = (index, cat) => {
         if (window.confirm("Are you sure?")) {
             this.props.deletePost({index, cat});
-            this.props.history.push("/");
+            this.props.history.push("/blog-live/");
         };
     }
 
@@ -271,7 +271,7 @@ class App extends Component {
  
                 <Route 
                     exact 
-                    path="/signUp"
+                    path="/blog-live/signUp"
 
                     render={()=>{
                         return <LogIn 
@@ -286,7 +286,7 @@ class App extends Component {
 
                 <Route 
                     exact 
-                    path="/"
+                    path="/blog-live/"
 
                     render={()=>{
                         return getUsers(state).loggedIn !== "null"
@@ -313,7 +313,7 @@ class App extends Component {
                     return (<Route 
                         key={getUsers(state).users.indexOf(object)} 
                         exact 
-                        path={`/users/${object.username}`}
+                        path={`/blog-live/users/${object.username}`}
                         render={()=>{ 
                             return <UserPage 
                                 username={object.username}
@@ -326,7 +326,7 @@ class App extends Component {
 
                 <Route
                     exact 
-                    path = "/posts/newpost" 
+                    path = "/blog-live/posts/newpost" 
                     render = {(props) => 
                         <NewPost 
                             title={title}
@@ -342,7 +342,7 @@ class App extends Component {
                     return (<Route 
                         key={getPosts(state).indexOf(object)} 
                         exact 
-                        path={`/posts/${getPosts(state).indexOf(object)}`} 
+                        path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
                         render={()=>{
                             return isEditing
                             ? <NewPost 
