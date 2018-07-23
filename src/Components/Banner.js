@@ -6,7 +6,7 @@ const Banner = (props) => {
     return (
         <div className="bannerDiv">
             <div className="bannerImg">          
-                <img src="../assets/skyscrapers.jpg" />
+                <img src="../public/assets/skyscrapers.jpg" />
             </div>
             <div className="bannerText">
                 <p className="bigFont">Talking Tech.</p>
