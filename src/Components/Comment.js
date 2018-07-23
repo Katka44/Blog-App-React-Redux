@@ -12,7 +12,18 @@ const Comment = (props) => {
 
     return (
         <div className="comment">
-            <p className="commentText"><span><Link exact to={`/blog-live/users/${author}`} title={`See ${author}'s profile`}>{author}</Link></span> {text}</p>
+            <p className="commentText">
+                {text}
+                <span> 
+                    <Link 
+                        exact 
+                        to={`/blog-live/users/${author}`}
+                        title={`See ${author}'s profile`}>
+                            {author}
+                    </Link>
+                </span> 
+                
+            </p>
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { importAll } from "../handlers";
 import PropTypes from "prop-types";
 import "./BigPostBody.css";
 
@@ -7,7 +8,12 @@ const BigPostBody = (props) => {
     const {
         title,
         category,
-        text,
+        textBeginning,
+        textEnd,
+        subtitle,
+        src,
+        alt,
+        punchline,
         author,
         likedBy,
         comments,
@@ -17,14 +23,12 @@ const BigPostBody = (props) => {
         displayTime
     } = props;
 
+    const images = importAll(require.context("../assets", false, /.jpg/));
+    console.log(src);
+
     return (
         <div className="bigPostContentDiv">
-            <div className="postBody">
-                <p>Title: {title}</p>
-                <p>Category: {category}</p>
-                <p>{text}</p>
-            </div>
-            <p className="writtenBy">Written by 
+            <p className="writtenBy">Written by&nbsp;
                 <span>
                     <Link 
                     exact 
@@ -32,12 +36,18 @@ const BigPostBody = (props) => {
                     title={`See ${author}'s profile`}>
                         {author}
                     </Link>
-                </span>
-                <span>on </span>
+                </span>&nbsp;
+                <span>on</span>&nbsp;
                 <span>{displayDate(writtenDate)}</span>
-                <span> at </span>
-                <span>{displayTime(writtenDate)}</span> 
             </p>
+            <div className="postBody">
+                <p className="titleP">{title}</p>
+                <p className="subtitle">{subtitle}</p>
+                <img src={images[src]} alt={alt}/>
+                <p>{textBeginning}</p>
+                <p className="punchline">"{punchline}"</p>
+                <p>{textEnd}</p>
+            </div>
             <div className="commentsLikesCount">
                 <i className="far fa-comment"></i>
                 <p>{comments}</p>
@@ -56,7 +66,12 @@ const BigPostBody = (props) => {
 BigPostBody.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
-    text: PropTypes.string,
+    textBeginning: PropTypes.string,
+    textEnd: PropTypes.string,
+    subtitle: PropTypes.string,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    punchline: PropTypes.string,
     author: PropTypes.string,
     likedBy: PropTypes.array,
     comments: PropTypes.number,

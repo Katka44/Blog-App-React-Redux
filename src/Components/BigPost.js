@@ -17,7 +17,12 @@ const BigPost = (props) => {
         index,
         title,
         category,
-        text,
+        textBeginning,
+        textEnd,
+        subtitle,
+        src,
+        alt,
+        punchline,
         comment,
         author,
         likedBy,
@@ -70,34 +75,41 @@ const BigPost = (props) => {
                 handleDelete={handleDelete}
                 cat={cat} />
 
-            <BigPostBody 
-                title={title}
-                category={category}
-                text={text}
-                author={author}
-                likedBy={likedBy}
-                comments={comments.length}
-                loggedIn={getUsers(state).loggedIn}
-                displayDate={displayDate}
-                writtenDate={writtenDate}
-                displayTime={displayTime}
-            />
+            <div className="bigPostInnerDiv">
+                <BigPostBody 
+                    title={title}
+                    category={category}
+                    textBeginning={textBeginning}
+                    textEnd={textEnd}
+                    src={src}
+                    alt={alt}
+                    subtitle={subtitle}
+                    punchline={punchline}
+                    author={author}
+                    likedBy={likedBy}
+                    comments={comments.length}
+                    loggedIn={getUsers(state).loggedIn}
+                    displayDate={displayDate}
+                    writtenDate={writtenDate}
+                    displayTime={displayTime}
+                />
 
-            <BigPostReactions 
-                index={index}
-                comment={comment}
-                handleChange={handleChange}
-                handleCommentSubmit={handleCommentSubmit}
-                handleLike={handleLike}
-                loggedIn={getUsers(state).loggedIn}
-                likedBy={likedBy}
-            />
-               
-            <Comments 
-                makeComments={makeComments}
-                posts={getPosts(state)}
-                index={index}
-            />
+                <BigPostReactions 
+                    index={index}
+                    comment={comment}
+                    handleChange={handleChange}
+                    handleCommentSubmit={handleCommentSubmit}
+                    handleLike={handleLike}
+                    loggedIn={getUsers(state).loggedIn}
+                    likedBy={likedBy}
+                />
+                   
+                <Comments 
+                    makeComments={makeComments}
+                    posts={getPosts(state)}
+                    index={index}
+                />
+            </div>
 
         </div>
     );
@@ -118,8 +130,13 @@ const mapDispatchToProps = dispatch => {
 BigPost.propTypes = {
     index: PropTypes.number,
     title: PropTypes.string,
+    subtitle: PropTypes.string,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    punchline: PropTypes.string,
     category: PropTypes.string,
-    text: PropTypes.string,
+    textBeginning: PropTypes.string,
+    textEnd: PropTypes.string,
     comment: PropTypes.string,
     author: PropTypes.string,
     likeCount: PropTypes.number,

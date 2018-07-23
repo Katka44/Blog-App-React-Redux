@@ -9,3 +9,7 @@
     width: 100%;
     display: block;
 }
+.bigPostInnerDiv {
+	border: 1px solid var(--light-grey-color);
+	padding: 50px;
+}

@@ -44,7 +44,6 @@ class App extends Component {
 
     makeSmallPost = (array) => {
         const { state } = this.props;
-        const path = "/assets/";
 
         const newArray = array.map((object, index) => {
             return <SmallPost 
@@ -358,7 +357,12 @@ class App extends Component {
                                 index={getPosts(state).indexOf(object)}
                                 title={object.title}
                                 category={object.category}
-                                text={object.text}
+                                textBeginning={object.textBeginning}
+                                textEnd={object.textEnd}
+                                subtitle={object.subtitle}
+                                src={object.image}
+                                alt={object.alt}
+                                punchline={object.punchline}
                                 comment={comment}
                                 author={object.author}
                                 likedBy={object.likedBy}

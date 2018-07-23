@@ -1,9 +1,8 @@
 .commentText {
-	border: 1px solid grey;
-	padding: 5px;
-	border-radius: 3px;
+    padding: 5px;
+    border-radius: 3px;
 }
 .commentText span {
-	font-weight: bold;
-	color: grey;
+    font-weight: bold;
+    color: grey;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { importAll } from "../handlers";
 import PropTypes from "prop-types";
 import "./SmallPost.css";
 
@@ -16,19 +17,10 @@ const SmallPost = (props) => {
             alt
         } = props;
 
-    const importAll = r => {
-        let images = {};
-
-        r.keys().forEach((item, index) => {
-            images[item.replace("./", "")] = r(item);
-        });
-        return images;
-    };
-
     const images = importAll(require.context("../assets", false, /.jpg/));
 
     return (
-        <Link exact to={`/blog-live/posts/${index}`} >
+        <Link className="link" exact to={`/blog-live/posts/${index}`} >
             <img src={images[src]} alt={alt}/>
             <div className="postDiv">
 
