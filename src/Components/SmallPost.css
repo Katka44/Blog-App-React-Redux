@@ -1,27 +1,53 @@
 .postDiv {
-    display: grid;
-    grid-template-columns: 3fr 1.5fr 1fr;
-    grid-template-areas: "title category icons";
-    border: 1px solid grey;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
     width: 100%;
-    border-radius: 5px;
-}
-.postDiv:hover, button:hover, .postsDiv a:hover {
-    background-color: var(--hover-color);
 }
 .iconsDiv {
     grid-area: icons;
-	display: flex;
-	align-items: center;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
     font-size: 13px;
+    align-items: center;
 }
 .iconsDiv p, .iconsDiv i {
 	width: 25%;
 	margin: 0;
+    justify-self: end;
 }
 .red {
     color: red;
+}
+img {
+    width: 100%;
+}
+a {
+    border: 1px solid var(--light-grey-color);
+}
+.smallPostBottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "category icons";
+}
+.smallPostBottomP {
+    margin-top: var(--small-post-margin);
+    margin-left: var(--small-post-margin);
+    margin-bottom: var(--small-post-margin);
+}
+.smallPostBottom div {
+    margin-top: var(--small-post-margin);
+    margin-right: var(--small-post-margin);
+    margin-bottom: var(--small-post-margin);
+}
+span {
+    margin-bottom: 30px;
+}
+.postDiv h3, .headline {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+p {
+    font-size: 16px;
 }

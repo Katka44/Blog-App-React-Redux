@@ -1,6 +1,6 @@
 .wrapperDiv {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 7fr 1fr;
     grid-column-gap: 20px;
     grid-template-areas: "left main right";
 }
@@ -16,4 +16,11 @@
 .smallText span {
     text-decoration: underline;
     cursor: pointer;
+}
+.postsWrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--welcome-page-grid-gap);
+    grid-row-gap: var(--welcome-page-grid-gap);
 }

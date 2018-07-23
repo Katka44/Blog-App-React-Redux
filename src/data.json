@@ -2,6 +2,7 @@
     "posts": [
         {
             "title": "My Day in Integrify",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Work",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah", "Carl", "Emily"],
@@ -28,11 +29,13 @@
                     "author" : "Carl",
                     "text": "Comment 5"
                 }
-
-            ]
+            ],
+            "image" : "aeromobil.jpg",
+            "alt" : "AeroMobil flying car"  
         },       
         {
             "title": "My Speech at React Meetup",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Speech",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah", "Jackie", "Ian", "Carl"],
@@ -55,10 +58,13 @@
                     "author" : "Emily",
                     "text": "Comment 4"
                 }
-            ]
+            ],
+            "image" : "circuitboard.jpg",
+            "alt" : "Circuitboard"
         },       
         {
             "title": "Fun at the Beach",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Recreation",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice"],
@@ -81,10 +87,13 @@
                     "author" : "Jackie",
                     "text": "Comment 4"
                 }
-            ]
+            ],
+            "image" : "clamp.jpg",
+            "alt" : "Steel clamp"  
         },
         {
             "title": "My Latest Project",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Work",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Emily", "George", "David", "Hannah"],
@@ -123,10 +132,13 @@
                     "author" : "Carl",
                     "text": "Comment 8"
                 }
-            ]
+            ],
+            "image" : "dutch-ballooning-fire.jpg",
+            "alt" : "Hot air balloon fire"  
         },       
         {
             "title": "Learning Redux",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Work",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah", "Fred"],
@@ -141,10 +153,13 @@
                     "author" : "Carl",
                     "text": "Comment 2"
                 }
-            ]
+            ],
+            "image" : "innovation.jpg",
+            "alt" : "Innovation technology"  
         },       
         {
             "title": "Trip to Toronto",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Recreation",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "Hannah", "Fred"],
@@ -171,10 +186,13 @@
                     "author" : "David",
                     "text": "Comment 5"
                 }
-            ]
+            ],
+            "image" : "meeting.jpg",
+            "alt" : "Business meeting"  
         },
         {
             "title": "Happy New Year",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Holidays",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["George", "David", "Hannah"],
@@ -201,10 +219,13 @@
                     "author" : "Carl",
                     "text": "Comment 5"
                 }
-            ]
+            ],
+            "image" : "mind-the-gap.jpg",
+            "alt" : "Mind the gap"  
         },       
         {
             "title": "How to Build a Business",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Business",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "David", "Hannah", "Ian", "Becky"],
@@ -227,10 +248,13 @@
                     "author" : "Fred",
                     "text": "Comment 4"
                 }
-            ]
+            ],
+            "image" : "modern-building.jpg",
+            "alt" : "Modern building"  
         },       
         {
             "title": "Motivational Speech",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Speech",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah", "Ian"],
@@ -249,10 +273,13 @@
                     "author" : "Emily",
                     "text": "Comment 3"
                 }
-            ]            
+            ],
+            "image" : "open-hard-disk-drive.jpg",
+            "alt" : "Open hard disk drive"              
         },
         {
             "title": "Volatility Trading Is a Problem",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Finance",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "Hannah"],
@@ -271,10 +298,13 @@
                     "author" : "Ian",
                     "text": "Comment 3"
                 }
-            ]             
+            ],
+            "image" : "silence.jpg",
+            "alt" : "silence"    
         },       
         {
             "title": "Technology in Healthcare",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Technology",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah", "Emily"],
@@ -289,10 +319,13 @@
                     "author" : "Ian",
                     "text": "Comment 2"
                 }
-            ]              
+            ],
+            "image" : "tunnel.jpg",
+            "alt" : "Tunnel"                
         },       
         {
             "title": "What is the Secret to Successful Blogging?",
+            "headline" : "From no cyberbullying to less pink, three women in tech share their thoughts on how life would change with gender parity in the industry.",
             "category": "Blog",
             "text": "Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text Really long text", 
             "likedBy": ["Alice", "George", "David", "Hannah"],
@@ -311,7 +344,9 @@
                     "author" : "George",
                     "text": "Comment 3"
                 }
-            ]  
+            ],
+            "image" : "aeromobil.jpg",
+            "alt" : "AeroMobil flying car"  
         }    
     ],
     "users" : [

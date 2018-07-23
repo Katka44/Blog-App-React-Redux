@@ -43,7 +43,7 @@ const NewPost = (props) => {
                 onClick={() => handleSave(index)}>Save</button>}
             
 
-            <button type="button" onClick={handleResetPost}><Link exact to="/blog-live/">Cancel</Link></button>
+            <button type="button" onClick={handleResetPost}><Link exact to="/">Cancel</Link></button>
             <p></p>
         </form>
 

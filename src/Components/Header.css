@@ -1,5 +1,44 @@
 header {
-	grid-area: main;
-	display: flex;
-	justify-content: space-between;
+    padding-top: 20px;
+    background-color: var(--main-dark-color);
+    color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav social avatar"
+    "top top top top"
+    "left text text right"
+    "bottom bottom bottom bottom";
+    font-family: var(--header-font);
+}
+.navigation {
+    padding-left: 30px;
+    display: flex;    
+    align-items: center;
+    grid-area: nav;
+}
+.navigation p {
+    margin: 0 10px 0 0;
+    font-size: 20px;
+}
+.socialTop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+    align-items: center;
+}
+.social i {
+    cursor: pointer;
+}
+.avatar {
+    align-items: center;
+}
+.avatar img {
+    width: 40px;
+    border-radius: 50%;
+    align-self: end;
+}
+.navigation, .socialTop, .avatar {
+    margin-bottom: 10px;
 }

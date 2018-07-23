@@ -1,25 +1,30 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import Banner from "./Banner";
 import "./Header.css";
 
 const Header = (props) => {
 
-    const {
-        handleLogOut,
-        users
-    } = props
-
     return (
         <header>
-            <p className="username" title="Profile"><Link exact to={`/blog-live/users/${users.loggedIn}`}>{users.loggedIn}</Link></p>
-            <p onClick={handleLogOut} >Log Out</p>
+            <div className="navigation">
+                <p>HOME</p>
+                <p>|</p>
+                <p>BLOG</p>
+                <p>|</p>
+                <p>ABOUT</p>
+            </div>            
+            <div className="socialTop">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div className="avatar">
+                <img src="../assets/avatars.jpg" />
+            </div> 
+            <Banner />
         </header>
     );
 }
-
-Header.propTypes = {
-
-};
 
 export default Header;

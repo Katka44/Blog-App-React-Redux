@@ -28,7 +28,7 @@ const BigPostBody = (props) => {
                 <span>
                     <Link 
                     exact 
-                    to={`/blog-live/blog-live/users/${author}`}
+                    to={`/users/${author}`}
                     title={`See ${author}'s profile`}>
                         {author}
                     </Link>

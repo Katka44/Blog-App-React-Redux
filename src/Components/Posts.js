@@ -45,7 +45,7 @@ const Posts = (props) => {
             <div className="mainDiv">
                 <Button         
                     isLink="true"
-                    to="/blog-live/posts/newpost"
+                    to="/posts/newpost"
                     text="Add Post" />
 
                 {makeSmallPost(makeFilteredArray(getPosts(state), filter))}

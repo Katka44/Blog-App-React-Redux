@@ -1,0 +1,20 @@
+footer {
+    padding: 20px;
+    background-color: var(--main-dark-color);
+    color: var(--main-bg-color);
+}
+.social {
+    width: 15%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.social i {
+    cursor: pointer;
+}
+.copyright {
+    margin-top: 15px;
+}
+small {
+    font-size: 12px;
+}

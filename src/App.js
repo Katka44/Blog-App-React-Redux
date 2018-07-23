@@ -10,6 +10,8 @@ import SmallPost from "./Components/SmallPost";
 import NewPost from "./Components/NewPost";
 import BigPost from "./Components/BigPost";
 import UserPage from "./Components/UserPage";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import { getPosts, getUsers } from "./reducers/index";
 
 import PropTypes from "prop-types";
@@ -42,16 +44,20 @@ class App extends Component {
 
     makeSmallPost = (array) => {
         const { state } = this.props;
+        const path = "/assets/";
 
         const newArray = array.map((object, index) => {
             return <SmallPost 
                 key={index}
                 index={index}
                 title={object.title}
+                headline={object.headline}
                 category={object.category}
                 commentsCount={object.comments.length}
                 likedBy={object.likedBy}
                 loggedIn={getUsers(state).loggedIn}
+                src={path + object.image}
+                alt={object.alt}
             />
         });
         return newArray;
@@ -105,7 +111,7 @@ class App extends Component {
     }
 
     goToSignUp = () => {
-        this.props.history.push("/blog-live/signUp");
+        this.props.history.push("/signUp");
     }
 
     handleSignUp = () => {
@@ -115,7 +121,7 @@ class App extends Component {
                 "password": this.state.password,
                 "favorites": []
             });
-            this.props.history.push("/blog-live/");
+            this.props.history.push("/");
         } else {
             window.alert("Please enter username and password.");
         }
@@ -167,7 +173,7 @@ class App extends Component {
                 }
             )
         this.handleResetPost();
-        this.props.history.push("/blog-live/");
+        this.props.history.push("/");
     }
 
     handleFilter = (filter) => {
@@ -238,7 +244,7 @@ class App extends Component {
     handleDelete = (index, cat) => {
         if (window.confirm("Are you sure?")) {
             this.props.deletePost({index, cat});
-            this.props.history.push("/blog-live/");
+            this.props.history.push("/");
         };
     }
 
@@ -257,12 +263,15 @@ class App extends Component {
         const {
             state
         } = this.props;
-        
+
         return (
             <div className="App">
+
+                <Header />
+ 
                 <Route 
                     exact 
-                    path="/blog-live/signUp"
+                    path="/signUp"
 
                     render={()=>{
                         return <LogIn 
@@ -277,7 +286,7 @@ class App extends Component {
 
                 <Route 
                     exact 
-                    path="/blog-live/"
+                    path="/"
 
                     render={()=>{
                         return getUsers(state).loggedIn !== "null"
@@ -304,7 +313,7 @@ class App extends Component {
                     return (<Route 
                         key={getUsers(state).users.indexOf(object)} 
                         exact 
-                        path={`/blog-live/users/${object.username}`}
+                        path={`/users/${object.username}`}
                         render={()=>{ 
                             return <UserPage 
                                 username={object.username}
@@ -317,7 +326,7 @@ class App extends Component {
 
                 <Route
                     exact 
-                    path={"/blog-live/posts/newpost"}
+                    path = "/posts/newpost" 
                     render = {(props) => 
                         <NewPost 
                             title={title}
@@ -333,7 +342,7 @@ class App extends Component {
                     return (<Route 
                         key={getPosts(state).indexOf(object)} 
                         exact 
-                        path={`/blog-live/posts/${getPosts(state).indexOf(object)}`}
+                        path={`/posts/${getPosts(state).indexOf(object)}`} 
                         render={()=>{
                             return isEditing
                             ? <NewPost 
@@ -366,6 +375,7 @@ class App extends Component {
                         />)
                     })
                 }
+                <Footer />
             </div>
         );
     }

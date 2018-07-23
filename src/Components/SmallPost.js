@@ -7,29 +7,35 @@ const SmallPost = (props) => {
     const {
             index,
             title,
+            headline,
             category,
             commentsCount,
             likedBy,
-            loggedIn
+            loggedIn,
+            src,
+            alt
         } = props;
 
     return (
-        <Link exact to={`/blog-live/posts/${index}`} >
+        <Link exact to={`/posts/${index}`} >
+            <img src={src} alt={alt}/>
             <div className="postDiv">
 
-                <p>{title}</p>
-                <p>{category}</p>
-
-                <div className="iconsDiv">
-                    <i className="far fa-comment"></i>
-                    <p>{commentsCount}</p>
-                    <i className= {loggedIn === "null"
-                        ? "far fa-heart" 
-                        : likedBy.includes(loggedIn) 
-                            ? "far fa-heart red"
-                            : "far fa-heart"}>
-                    </i>
-                    <p>{likedBy.length}</p>
+                <h3>{title}</h3>
+                <p className="headline">{headline}</p>
+                <div className="smallPostBottom">
+                    <p className="smallPostBottomP">{category}</p>
+                    <div className="iconsDiv">
+                        <i className="far fa-comment"></i>
+                        <p>{commentsCount}</p>
+                        <i className= {loggedIn === "null"
+                            ? "far fa-heart" 
+                            : likedBy.includes(loggedIn) 
+                                ? "far fa-heart red"
+                                : "far fa-heart"}>
+                        </i>
+                        <p>{likedBy.length}</p>
+                    </div>
                 </div>
             </div>
         </Link>
