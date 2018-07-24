@@ -47,10 +47,11 @@ const Posts = (props) => {
         */}
 
             <div className="mainDiv">
-                <Button         
+                <Button       
+                    className="addNew"  
                     isLink="true"
                     to="/blog-live/posts/newpost"
-                    text="Add Post" />
+                    text="Write New Post" />
 
                 <div className="postsWrapper">{makeSmallPost(makeFilteredArray(getPosts(state), filter))}</div>
             </div>

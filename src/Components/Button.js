@@ -11,7 +11,8 @@ const Button = (props) => {
         to,
         text,
         handler,
-        className
+        className,
+        title
     } = props;
 
     return (

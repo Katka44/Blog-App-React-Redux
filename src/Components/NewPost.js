@@ -23,6 +23,7 @@ const NewPost = (props) => {
 
     return (
         <form>
+            <h2>Write Your Post</h2>
             <div className="inputDiv">
                 <input
                     name="title"
@@ -48,7 +49,7 @@ const NewPost = (props) => {
             <textarea 
                 name="textBeginning" 
                 rows="10"
-                placeholder="Top half of your post."
+                placeholder="Top half of your post"
                 onChange={handleChange}
                 value={textBeginning} ></textarea>
             <input
@@ -59,22 +60,22 @@ const NewPost = (props) => {
             <textarea 
                 name="textEnd" 
                 rows="10"
-                placeholder="Bottom half of your post."
+                placeholder="Bottom half of your post"
                 onChange={handleChange}
                 value={textEnd} ></textarea>
-            {(title.trim() === "" || category.trim() === "" || textBeginning.trim() === "" || textEnd.trim() === "")
+
+            <div className="buttonsDiv">
+                {(title.trim() === "" || category.trim() === "" || textBeginning.trim() === "" || textEnd.trim() === "")
                 ? <button 
                 type="button" 
                 onClick={() => window.alert("Please fill all the fields.")}>Save</button>
                 : <button 
                 type="button" 
                 onClick={() => handleSave(index)}>Save</button>}
-            
 
             <button type="button" onClick={handleResetPost}><Link exact to="/blog-live/">Cancel</Link></button>
-            <p></p>
+            </div>
         </form>
-
     );
 }
 
