@@ -35,7 +35,7 @@ textarea {
 }
 .buttonsDiv {
     align-items: flex-end;
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
+}
+.buttonsDiv button {
+    margin-right: 10px;
 }

@@ -14,7 +14,7 @@ const Tags = (props) => {
             key="seeAll"
             className="tag"
             onClick={() => handleFilter("none")} 
-            title={`Click to see all posts`} >All</p>
+            title={`See all posts`} >ALL</p>
     }
 
     const makeTags = (array) => {
@@ -31,7 +31,7 @@ const Tags = (props) => {
                 key={index} 
                 className="tag"
                 onClick={() => handleFilter(item)} 
-                title={`Click to see ${item} posts`} >{item}</p>
+                title={`See ${item.toLowerCase()} posts`} >{item}</p>
         }); 
 
         return (categories.length > 1) ? tags.concat(makeSeeAll()) : tags

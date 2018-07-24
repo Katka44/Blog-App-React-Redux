@@ -11,15 +11,17 @@ const UserPage = (props) => {
     const makeUserPosts = (array) => {
         const newArray = array.map((object, index) => {
             if (object.author === username) {
-                return <SmallPost 
-                    key={index}
-                    index={index}
-                    title={object.title}
-                    category={object.category}
-                    commentsCount={object.comments.length}
-                    likedBy={object.likedBy}
-
-                />
+                return <div className="post"><SmallPost 
+                key={index}
+                index={index}
+                title={object.title}
+                headline={object.headline}
+                category={object.category}
+                commentsCount={object.comments.length}
+                likedBy={object.likedBy}
+                src={object.image}
+                alt={object.alt}
+                /></div>
             }
         });
         return newArray;
@@ -27,8 +29,7 @@ const UserPage = (props) => {
 
     return (
         <div className="userPage">
-            <h3>Hello, I am {username}</h3>
-            <div className="posts">{makeUserPosts(posts)}</div>
+            {makeUserPosts(posts)}
         </div>
     );
 }

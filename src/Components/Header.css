@@ -44,6 +44,12 @@ header {
     align-self: end;
     cursor: pointer;
 }
+.avatar p {
+    margin: 0;
+}
 .navigation, .socialTop, .avatar {
     margin-bottom: 10px;
+}
+.username {
+    color: var(--main-bg-color);
 }

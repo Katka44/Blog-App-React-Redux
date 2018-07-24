@@ -298,7 +298,12 @@ class App extends Component {
         return (
             <div className="App">
 
-                <Header />
+                <Header 
+                    loggedIn={getUsers(state).loggedIn}
+                    handleLogOut={this.handleLogOut}
+                    handleFilter={this.handleFilter}
+                    posts={getPosts(state)}
+                    handleLatest={this.handleLatest} />
  
                 <Route 
                     exact 

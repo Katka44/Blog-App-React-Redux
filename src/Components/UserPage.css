@@ -1,10 +1,14 @@
 .userPage {
+	width: 70%;
+	margin: auto;
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     grid-template-areas: 
-    "header header header"
-    "left posts right";
+    "header header"
+    "left posts";
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 h3 {
     grid-area: header;
