@@ -29,3 +29,14 @@
     grid-column-gap: var(--welcome-page-grid-gap);
     grid-row-gap: var(--welcome-page-grid-gap);
 }
+@media screen and (max-width: 1350px) {
+    .postsWrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .postsWrapper {
+        grid-template-columns: 1fr;
+    }
+}

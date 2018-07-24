@@ -1,6 +1,6 @@
 footer {
-    height: 60px;
-    padding: 20px;
+    height: var(--footer-height);
+    padding: 10px;
     background-color: var(--main-dark-color);
     color: var(--main-bg-color);
 }

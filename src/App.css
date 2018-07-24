@@ -11,16 +11,24 @@
 
     --small-post-margin: 25px;
     --welcome-page-grid-gap: 30px;
+
+    --header-height: 70px;
+    --footer-height: 60px;
 }
 body {
     background-color: var(--main-bg-color);
     font-family: var(--main-font);
     color: var(--main-font-color);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
 }
 .App {
     width: 100%;
     margin: auto;
     text-align: center;
-    min-height: 100%;
-    position: relative;
+}
+.container {
+
 }

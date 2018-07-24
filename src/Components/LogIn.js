@@ -10,30 +10,37 @@ const LogIn = (props) => {
         password,
         handleChange,
         handleLogIn,
-        buttonText
+        buttonText,
+        goToSignUp,
+        loggedIn,
+        signUpLine
     } = props;
 
     return (
-        <form className="loginDiv" >
-            <p>{title}</p>
-            <input 
-                name="username"
-                value={username}
-                onChange={handleChange}
-                placeholder="Username"/>
-            <input 
-                name="password" 
-                type="password" 
-                value={password}
-                onChange={handleChange}
-                placeholder="Password"/>
-            <Button   
-               
-                type="button"
-                isLink="false"
-                text={buttonText}
-                handler={handleLogIn} />
-        </form>
+        <div>
+            <form className="loginDiv" >
+                <p>{title}</p>
+                <input 
+                    name="username"
+                    value={username}
+                    onChange={handleChange}
+                    placeholder="Username"/>
+                <input 
+                    name="password" 
+                    type="password" 
+                    value={password}
+                    onChange={handleChange}
+                    placeholder="Password"/>
+                <Button   
+                   
+                    type="button"
+                    isLink="false"
+                    text={buttonText}
+                    handler={handleLogIn} />
+            </form>
+            {signUpLine === "false" ? <p></p>: <p className="smallText">Don't have an account? <span onClick={goToSignUp}>Sign up</span></p>}
+            
+        </div>
     );
 }
 
@@ -43,7 +50,10 @@ LogIn.propTypes = {
     password: PropTypes.string,
     handleChange: PropTypes.func,
     handleLogIn: PropTypes.func,
-    buttonText: PropTypes.string
+    buttonText: PropTypes.string,
+    goToSignUp: PropTypes.func,
+    loggedIn: PropTypes.string,
+    signUpLine: PropTypes.string
 };
 
 export default LogIn;

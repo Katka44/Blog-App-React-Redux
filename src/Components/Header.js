@@ -33,9 +33,13 @@ const Header = (props) => {
                 <i className="fab fa-linkedin-in"></i>
             </div>
             <div className="avatar">
-                <Link exact to={`/blog-live/users/${loggedIn}`} className="username"><img src={avatar} alt="profile avatar" title={`See your profile`}/></Link>
-
-                <p onClick={handleLogOut} className="pointer">LOG OUT</p>
+                
+                {loggedIn !== "null" 
+                    ?   <div>
+                        <Link exact to={`/blog-live/users/${loggedIn}`} className="username"><img src={avatar} alt="profile avatar" title={`See your profile`}/></Link>
+                        <p onClick={handleLogOut} className="pointer logIn">LOG OUT</p> 
+                        </div>
+                    :   <Link exact to={`/blog-live/logIn`}><p className="logIn">LOG IN</p></Link>}
             </div>
         </header>
     );

@@ -53,3 +53,7 @@ header {
 .username {
     color: var(--main-bg-color);
 }
+.logIn {
+    font-size: 20px;
+    color: var(--main-bg-color);
+}

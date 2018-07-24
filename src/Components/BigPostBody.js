@@ -24,7 +24,6 @@ const BigPostBody = (props) => {
     } = props;
 
     const images = importAll(require.context("../assets", false, /.jpg/));
-    console.log(src);
 
     return (
         <div className="bigPostContentDiv">

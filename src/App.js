@@ -258,7 +258,8 @@ class App extends Component {
                     password
                 }
             );
-            this.clearLogin();            
+            this.clearLogin();
+            this.props.history.push("/blog-live/");           
         } else {
             window.alert("Please enter username and password.");
         }
@@ -297,96 +298,95 @@ class App extends Component {
 
         return (
             <div className="App">
-
-                <Header 
-                    loggedIn={getUsers(state).loggedIn}
-                    handleLogOut={this.handleLogOut}
-                    handleFilter={this.handleFilter}
-                    posts={getPosts(state)}
-                    handleLatest={this.handleLatest} />
- 
-                <Route 
-                    exact 
-                    path="/blog-live/signUp"
-
-                    render={()=>{
-                        return <LogIn 
-                            title="Please Sign Up"
-                            username={username}
-                            password={password}
-                            handleChange={this.handleChange}
-                            handleLogIn={this.handleSignUp}
-                            buttonText="Sign Up" />
-                        }} 
-                    />
-
-                <Route 
-                    exact 
-                    path="/blog-live/"
-
-                    render={()=>{
-                        return getUsers(state).loggedIn !== "null"
-                        ? <Posts 
-                            makeSmallPost={this.makeSmallPost}
-                            filter={filter}
-                            handleFilter={this.handleFilter}
-                            handleSorting={this.handleSorting}
-                            handleLogOut={this.handleLogOut} 
-                            handleLatest={this.handleLatest} />
-                        : <Welcome 
-                            makeSmallPost={this.makeSmallPost}
-                            handleSort={this.handleSort}
-                            username={username}
-                            password={password}
-                            handleChange={this.handleChange}
-                            handleLogIn={this.handleLogIn}
-                            clearLogin={this.clearLogin}
-                            goToSignUp={this.goToSignUp} />
-                        }} 
-                    />
-
-                {state.users.users.map(object => {
-                    return (<Route 
-                        key={getUsers(state).users.indexOf(object)} 
+                <div className="container">
+                    <Header 
+                        loggedIn={getUsers(state).loggedIn}
+                        handleLogOut={this.handleLogOut}
+                        handleFilter={this.handleFilter}
+                        posts={getPosts(state)}
+                        handleLatest={this.handleLatest} />
+     
+                    <Route 
                         exact 
-                        path={`/blog-live/users/${object.username}`}
-                        render={()=>{ 
-                            return <UserPage 
-                                username={object.username}
-                                posts={getPosts(state)}
-                                handleSort={this.handleSort}
-                            /> 
-                        }} 
-                    />)
-                })}
+                        path="/blog-live/signUp"
 
-                <Route
-                    exact 
-                    path = "/blog-live/posts/newpost" 
-                    render = {(props) => 
-                        <NewPost 
-                            title={title}
-                            category={category}
-                            headline={headline}
-                            subtitle={subtitle}
-                            punchline={punchline}
-                            textBeginning={textBeginning}
-                            textEnd={textEnd}
-                            handleSave={this.handleSave}
-                            handleResetPost={this.handleResetPost}
-                            handleChange={this.handleChange}
-                        />
-                    }
-                />
-                {getPosts(state).map(object => {
-                    return (<Route 
-                        key={getPosts(state).indexOf(object)} 
-                        exact 
-                        path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
                         render={()=>{
-                            return isEditing
-                            ? <NewPost 
-                                index={getPosts(state).indexOf(object)}
+                            return <LogIn 
+                                title="Please Sign Up"
+                                username={username}
+                                password={password}
+                                handleChange={this.handleChange}
+                                handleLogIn={this.handleSignUp}
+                                buttonText="Sign Up"
+                                goToSignUp={this.goToSignUp}
+                                loggedIn={getUsers(state).loggedIn}
+                                signUpLine="false" />
+                            }} 
+                        />
+
+                    <Route 
+                        exact 
+                        path="/blog-live/logIn"
+
+                        render={()=>{
+                            return <LogIn 
+                                title="Please Log In"
+                                username={username}
+                                password={password}
+                                handleChange={this.handleChange}
+                                handleLogIn={this.handleLogIn}
+                                buttonText="Log In"
+                                goToSignUp={this.goToSignUp}
+                                loggedIn={getUsers(state).loggedIn}
+                                signUpLine="true" />
+                            }}
+                        />
+
+                    <Route 
+                        exact 
+                        path="/blog-live/"
+
+                        render={()=>{
+                            return getUsers(state).loggedIn !== "null"
+                            ? <Posts 
+                                makeSmallPost={this.makeSmallPost}
+                                filter={filter}
+                                handleFilter={this.handleFilter}
+                                handleSorting={this.handleSorting}
+                                handleLogOut={this.handleLogOut} 
+                                handleLatest={this.handleLatest} />
+                            : <Welcome 
+                                makeSmallPost={this.makeSmallPost}
+                                handleSort={this.handleSort}
+                                username={username}
+                                password={password}
+                                handleChange={this.handleChange}
+                                handleLogIn={this.handleLogIn}
+                                clearLogin={this.clearLogin}
+                                goToSignUp={this.goToSignUp} />
+                            }} 
+                        />
+
+                    {state.users.users.map(object => {
+                        return (<Route 
+                            key={getUsers(state).users.indexOf(object)} 
+                            exact 
+                            path={`/blog-live/users/${object.username}`}
+                            render={()=>{ 
+                                return <UserPage 
+                                    username={object.username}
+                                    posts={getPosts(state)}
+                                    handleSort={this.handleSort}
+                                /> 
+                            }} 
+                        />)
+                    })}
+
+                    <Route
+                        exact 
+                        path = "/blog-live/posts/newpost" 
+                        render = {(props) => 
+                            <NewPost 
                                 title={title}
                                 category={category}
                                 headline={headline}
@@ -398,32 +398,55 @@ class App extends Component {
                                 handleResetPost={this.handleResetPost}
                                 handleChange={this.handleChange}
                             />
-                            : <BigPost 
-                                index={getPosts(state).indexOf(object)}
-                                title={object.title}
-                                category={object.category}
-                                textBeginning={object.textBeginning}
-                                textEnd={object.textEnd}
-                                subtitle={object.subtitle}
-                                src={object.image}
-                                alt={object.alt}
-                                punchline={object.punchline}
-                                comment={comment}
-                                author={object.author}
-                                likedBy={object.likedBy}
-                                comments={object.comments}
-                                handleEdit={this.handleEdit}
-                                handleChange={this.handleChange}
-                                handleCommentSubmit={this.handleCommentSubmit}
-                                clearBigPostInputs={this.clearBigPostInputs}
-                                clearComment={this.clearComment}
-                                handleDelete={this.handleDelete}
-                                writtenDate={object.writtenDate}
-                            />
-                            }} 
-                        />)
-                    })
-                }
+                        }
+                    />
+                    {getPosts(state).map(object => {
+                        return (<Route 
+                            key={getPosts(state).indexOf(object)} 
+                            exact 
+                            path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
+                            render={()=>{
+                                return isEditing
+                                ? <NewPost 
+                                    index={getPosts(state).indexOf(object)}
+                                    title={title}
+                                    category={category}
+                                    headline={headline}
+                                    subtitle={subtitle}
+                                    punchline={punchline}
+                                    textBeginning={textBeginning}
+                                    textEnd={textEnd}
+                                    handleSave={this.handleSave}
+                                    handleResetPost={this.handleResetPost}
+                                    handleChange={this.handleChange}
+                                />
+                                : <BigPost 
+                                    index={getPosts(state).indexOf(object)}
+                                    title={object.title}
+                                    category={object.category}
+                                    textBeginning={object.textBeginning}
+                                    textEnd={object.textEnd}
+                                    subtitle={object.subtitle}
+                                    src={object.image}
+                                    alt={object.alt}
+                                    punchline={object.punchline}
+                                    comment={comment}
+                                    author={object.author}
+                                    likedBy={object.likedBy}
+                                    comments={object.comments}
+                                    handleEdit={this.handleEdit}
+                                    handleChange={this.handleChange}
+                                    handleCommentSubmit={this.handleCommentSubmit}
+                                    clearBigPostInputs={this.clearBigPostInputs}
+                                    clearComment={this.clearComment}
+                                    handleDelete={this.handleDelete}
+                                    writtenDate={object.writtenDate}
+                                />
+                                }} 
+                            />)
+                        })
+                    }
+                </div>    
                 <Footer />
             </div>
         );
