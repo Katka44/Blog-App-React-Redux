@@ -12,7 +12,8 @@ const Header = (props) => {
         handleLogOut,
         handleFilter,
         posts,
-        handleLatest
+        handleLatest,
+        handleSorting
     } =props;
     return (
         <header>
@@ -24,6 +25,16 @@ const Header = (props) => {
                 className="pointer"
                 title="Sort posts" >LATEST</p>
                 <p>|</p>
+                <p 
+                    onClick={() => {handleSorting(posts, "comments")}}
+                    className="pointer"
+                    title="Click to sort posts" >MOST COMMENTED</p>
+                <p>|</p>
+                <p 
+                    onClick={() => {handleSorting(posts, "likedBy")}}
+                    className="pointer"
+                    title="Click to sort posts" >MOST LIKED</p>
+                <p>|</p>    
                 <Tags handleFilter={handleFilter} posts={posts} />
             </div>            
             <div className="socialTop">
@@ -51,7 +62,8 @@ Header.propTypes = {
     handleLogOut: PropTypes.func,
     handleSorting: PropTypes.func,
     handleLatest: PropTypes.func,
-    handleFilter: PropTypes.func
+    handleFilter: PropTypes.func,
+    handleSorting: PropTypes.func
 };
 
 export default Header;

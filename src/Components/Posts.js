@@ -5,6 +5,7 @@ import Side from "./Side";
 import Button from "./Button";
 
 import { getPosts, getUsers } from "../reducers/index";
+import { makeFilteredArray } from "../handlers";
 import PropTypes from "prop-types";
 import "./Posts.css";
 
@@ -20,16 +21,6 @@ const Posts = (props) => {
     } = props;
 
     const { state } = props;
-
-    const makeFilteredArray = (array, filter) => {
-        if (filter !== "none") {
-            const filteredArray = array.filter((object) => {
-                return object.category === filter;
-            });
-            return filteredArray;
-        }
-        return array;
-    };
 
     return (
         <div className="wrapperDiv">

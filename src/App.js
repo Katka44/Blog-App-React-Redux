@@ -304,7 +304,8 @@ class App extends Component {
                         handleLogOut={this.handleLogOut}
                         handleFilter={this.handleFilter}
                         posts={getPosts(state)}
-                        handleLatest={this.handleLatest} />
+                        handleLatest={this.handleLatest}
+                        handleSorting={this.handleSorting} />
      
                     <Route 
                         exact 
@@ -363,7 +364,9 @@ class App extends Component {
                                 handleChange={this.handleChange}
                                 handleLogIn={this.handleLogIn}
                                 clearLogin={this.clearLogin}
-                                goToSignUp={this.goToSignUp} />
+                                goToSignUp={this.goToSignUp}
+                                posts={getPosts(state)}
+                                filter={filter} />
                             }} 
                         />
 

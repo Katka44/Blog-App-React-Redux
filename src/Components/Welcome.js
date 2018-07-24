@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import LogIn from "./LogIn";
 import Banner from "./Banner";
+import { makeFilteredArray } from "../handlers";
 import PropTypes from "prop-types";
 import "./Welcome.css";
 
@@ -13,12 +14,10 @@ const Welcome = (props) => {
         password,
         handleChange,
         handleLogIn,
-        goToSignUp
+        goToSignUp,
+        posts,
+        filter
     } = props;
-
-    const {
-        posts
-    } = props.state;
 
     return (
         <div className="wrapperDiv">
@@ -36,7 +35,7 @@ const Welcome = (props) => {
                 <p className="smallText">Don't have an account? <span onClick={goToSignUp}>Sign up</span></p>
 
             */}
-                <div className="postsWrapper">{makeSmallPost(handleSort(posts, "writtenDate").slice(0, 6))}</div>
+                <div className="postsWrapper">{makeSmallPost(makeFilteredArray(posts, filter))}</div>
             </div>
         </div>
     );
@@ -55,7 +54,9 @@ Welcome.propTypes = {
     password: PropTypes.string,
     handleChange: PropTypes.func,
     handleLogIn: PropTypes.func,
-    goToSignUp: PropTypes.func
+    goToSignUp: PropTypes.func,
+    posts: PropTypes.array,
+    filter: PropTypes.string
 };
 
 export default connect(
