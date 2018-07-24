@@ -132,7 +132,7 @@ class App extends Component {
                 "password": this.state.password,
                 "favorites": []
             });
-            this.props.history.push("/blog-live/");
+            this.props.history.push("/blog-live/logIn");
         } else {
             window.alert("Please enter username and password.");
         }

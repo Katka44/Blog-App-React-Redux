@@ -10,7 +10,7 @@ const Banner = (props) => {
             </div>
             <div className="bannerText">
                 <p className="bigFont">Talking Tech.</p>
-                <p className="slimFont">A BLOG ABOUT TECHNOLOGIES AND INNOVATIONS</p>
+                <p className="slimFont">BLOG ABOUT TECHNOLOGIES AND INNOVATIONS</p>
             </div>
         </div>
     );

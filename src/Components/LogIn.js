@@ -38,7 +38,7 @@ const LogIn = (props) => {
                     text={buttonText}
                     handler={handleLogIn} />
             </form>
-            {signUpLine === "false" ? <p></p>: <p className="smallText">Don't have an account? <span onClick={goToSignUp}>Sign up</span></p>}
+            {signUpLine === "false" ? <p></p> : <p className="smallText">Don't have an account? <span onClick={goToSignUp}>Sign up</span></p>}
             
         </div>
     );
