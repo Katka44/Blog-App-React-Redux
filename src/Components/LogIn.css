@@ -1,8 +1,84 @@
+.loginWrapperDiv {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+}
 .loginDiv {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
 }
 .loginDiv input {
-	max-width: 200px;
+    max-width: 200px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+    content: '';
+    background-color: transparent;
+    border: solid var(--light-grey-color) 1px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+    height: 9px;
+    padding: 1px;
+    margin: 0 10px 2px 0;
+    text-align: center;    
+}
+input[type="checkbox"]:checked + label:before {
+    content: '';
+    background-color: var(--main-dark-color);
+    border: solid var(--light-grey-color) 1px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+    height: 9px;
+    padding: 1px;
+    margin: 0 10px 2px 0;
+    text-align: center;    
+}
+.middle {
+    align-self: center; 
+}
+.googleFacebookDiv {
+    padding-top: 110px;
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: 60px;
+}
+.googleDiv, .facebookDiv {
+    cursor: pointer;
+    width: 300px;
+    align-items: center;
+    justify-items: left;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    border: 1px solid grey;
+    margin: 0;
+    color: var(--main-bg-color);
+    height: 35px;
+}
+.googleDiv {
+    background-color: var(--google-color);
+}
+.facebookDiv {
+    background-color: var(--facebook-color);
+}
+.googleDiv p, .facebookDiv p {
+    margin: 0;
+    padding: 8px 10px 8px 10px;
+}
+.googleDiv i, .facebookDiv i {
+    border-right: 1px solid grey;
+}
+.googleDiv i, .facebookDiv i {
+    width: 36px;
 }
