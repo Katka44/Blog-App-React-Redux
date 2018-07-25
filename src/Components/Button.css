@@ -1,8 +1,8 @@
 button {
     font-family: var(--main-font);
-    font-size: 1.3em;
+    font-size: 1.2em;
     display: inline-block;
-    color: var(--main-font-color);
+    color: var(--main-dark-color);
     outline: none;
     border: none;
     background-color: var(--main-bg-color);
@@ -10,9 +10,14 @@ button {
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 3px 5px 3px 5px;
+}
+button:hover {
+    background-color: #E6E6E6;
 }
 a {
-    color: var(--main-font-color);
+    color: var(--main-dark-color);
     text-decoration: none;
     width: 100%;
     display: block;

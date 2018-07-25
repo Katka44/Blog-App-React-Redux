@@ -9,8 +9,11 @@
     grid-area: icons;
 	display: grid;
     grid-template-columns: repeat(4, 1fr);
-    font-size: 13px;
-    align-items: center;
+    font-size: 1em;
+    align-items: center;  
+}
+.iconsDiv p {
+    font-size: 1em;    
 }
 .iconsDiv p, .iconsDiv i {
 	width: 25%;
@@ -49,5 +52,5 @@ span {
     margin-right: 30px;
 }
 p {
-    font-size: 16px;
+    font-size: 1em;
 }

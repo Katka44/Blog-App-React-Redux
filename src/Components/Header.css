@@ -10,6 +10,12 @@ header {
     "left text text right"
     "bottom bottom bottom bottom";
     font-family: var(--header-font);
+    align-items: center;
+}
+.menuIconDiv {
+    font-size: 2.5em;
+    display: none;
+    cursor: pointer;
 }
 .navigation {
     padding-left: 30px;
@@ -19,23 +25,26 @@ header {
 }
 .navigation p {
     margin: 0 10px 0 0;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 .navigation a {
     color: var(--main-bg-color);
     width: auto;
 }
 .socialTop {
+    grid-area: social;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
     align-items: center;
+    font-size: 1.1em;
 }
 .socialTop i {
     cursor: pointer;
 }
 .avatar {
+    grid-area: avatar;
     align-items: center;
 }
 .avatar img {
@@ -54,6 +63,36 @@ header {
     color: var(--main-bg-color);
 }
 .logIn {
-    font-size: 20px;
+    font-size: 1.3em;
     color: var(--main-bg-color);
+}
+@media screen and (max-width: 1150px) {
+    .navigation p, .logIn {
+        font-size: 1.5em;
+    }
+    .socialTop {
+        font-size: 1.3em;
+    }
+    .socialTop i {
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .menuIconDiv {
+        display: block;
+    }
+    .navigation {
+        display: none;
+    }
+    header {
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        padding-top: 10px;
+    }
+    .socialTop {
+        font-size: 1.5em;
+    }
+    .navigation, .socialTop, .avatar {
+        margin-bottom: 0;
+    }
 }

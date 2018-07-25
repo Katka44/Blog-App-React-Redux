@@ -22,12 +22,21 @@
     padding: 5px;
 }
 .bigFont {
-    font-size: 65px;
+    font-size: 4em;
     font-family: var(--main-font);
     margin: 0;
 }
 .slimFont {
     font-family: var(--header-font);
-    font-size: 25px;
+    font-size: 1.6em;
     margin: 0;
+}
+@media screen and (max-width: 1150px) {
+
+}
+
+@media screen and (max-width: 890px) {
+    .bigFont {
+        font-size: 3em;
+    }
 }

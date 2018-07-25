@@ -16,19 +16,26 @@
     --footer-height: 60px;
 }
 body {
+    font-size: 16px;
     background-color: var(--main-bg-color);
     font-family: var(--main-font);
     color: var(--main-font-color);
-    width: 100%;
     margin: 0;
     padding: 0;
-
 }
 .App {
-    width: 100%;
     margin: auto;
     text-align: center;
 }
-.container {
 
+@media screen and (max-width: 1150px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 11px;
+    }
 }

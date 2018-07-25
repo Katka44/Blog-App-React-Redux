@@ -16,7 +16,7 @@
     padding-bottom: var(--welcome-page-grid-gap);
 }
 .smallText {
-    font-size: 13px;
+    font-size: 0.85em;
 }
 .smallText span {
     text-decoration: underline;

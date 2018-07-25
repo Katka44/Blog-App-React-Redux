@@ -17,6 +17,9 @@ const Header = (props) => {
     } =props;
     return (
         <header>
+            <div className="menuIconDiv">
+                <i className="fas fa-bars"></i>
+            </div>
             <div className="navigation">
                 <Link exact to="/blog-live/"><p>HOME</p></Link>
                 <p>|</p>
