@@ -7,7 +7,7 @@ import "./UserPage.css";
 
 const UserPage = (props) => {
 
-    const { username, posts } = props;
+    const { username, posts, loggedIn } = props;
 
     const makeUserPosts = (array) => {
         const newArray = array.map((object, index) => {
@@ -36,7 +36,7 @@ const UserPage = (props) => {
                 isLink="true"
                 to="/blog-live/posts/newpost"
                 text="Write New Post" />
-            <h3>Your Posts</h3>
+            {loggedIn === "null" ? <h3>{`${username}'s Posts`}</h3> : username === loggedIn ? <h3>Your Posts</h3> : <h3>{`${username}'s Posts`}</h3>}
             {makeUserPosts(posts)}
         </div>
     );
@@ -50,7 +50,8 @@ const mapStateToProps = state => {
 
 UserPage.propTypes = {
     username: PropTypes.string,
-    posts: PropTypes.array
+    posts: PropTypes.array,
+    loggedIn: PropTypes.string
 };
 
 export default connect(

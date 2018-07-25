@@ -382,7 +382,7 @@ class App extends Component {
                                 return <UserPage 
                                     username={object.username}
                                     posts={getPosts(state)}
-                                    handleSort={this.handleSort}
+                                    loggedIn={getUsers(state).loggedIn}
                                 /> 
                             }} 
                         />)
