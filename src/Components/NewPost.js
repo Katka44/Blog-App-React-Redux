@@ -14,7 +14,6 @@ const NewPost = (props) => {
         punchline,
         textBeginning,
         textEnd,
-        alt,
         handleSave,
         handleResetPost,
         handleChange
@@ -87,7 +86,6 @@ NewPost.propTypes = {
     punchline: PropTypes.string,
     textBeginning: PropTypes.string,
     textEnd: PropTypes.string,
-    alt: PropTypes.string,
     handleSave: PropTypes.func,
     handleResetPost: PropTypes.func,
     handleChange: PropTypes.func

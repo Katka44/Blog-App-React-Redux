@@ -205,6 +205,7 @@ class App extends Component {
 
     handleFilter = (filter) => {
         this.setState({filter});
+        this.props.history.push("/blog-live/");
     }
 
     handleSort = (array, property) => {
@@ -238,11 +239,13 @@ class App extends Component {
     handleSorting = (array, property) => {
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
+        this.props.history.push("/blog-live/");
     }
 
     handleLatest = (array, property) => {
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
+        this.props.history.push("/blog-live/");
     }
 
     handleLogIn = () => {

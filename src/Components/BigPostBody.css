@@ -43,4 +43,9 @@
 }
 .text {
     font-size: 1.1em;
+    display: flex;
+    flex-direction: column;
+}
+.text span {
+
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import SmallPost from "./SmallPost";
+import Button from "./Button";
 import PropTypes from "prop-types";
 import "./UserPage.css";
 
@@ -29,6 +30,13 @@ const UserPage = (props) => {
 
     return (
         <div className="userPage">
+            <p className="empty"></p>
+            <Button       
+                className="addNew"  
+                isLink="true"
+                to="/blog-live/posts/newpost"
+                text="Write New Post" />
+            <h3>Your Posts</h3>
             {makeUserPosts(posts)}
         </div>
     );

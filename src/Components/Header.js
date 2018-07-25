@@ -65,8 +65,7 @@ Header.propTypes = {
     handleLogOut: PropTypes.func,
     handleSorting: PropTypes.func,
     handleLatest: PropTypes.func,
-    handleFilter: PropTypes.func,
-    handleSorting: PropTypes.func
+    handleFilter: PropTypes.func
 };
 
 export default Header;

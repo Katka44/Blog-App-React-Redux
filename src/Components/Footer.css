@@ -19,3 +19,24 @@ footer {
 small {
     font-size: 0.85em;
 }
+@media screen and (max-width: 1150px) {
+    .social {
+        font-size: 1.3em;
+    }
+    .social i {
+        padding: 10px 10px 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .social {
+        width: 25%;
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 650px) {
+    .social {
+        width: 75%;
+    }
+}

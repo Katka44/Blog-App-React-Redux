@@ -1,10 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import Side from "./Side";
 import Button from "./Button";
-
-import { getPosts, getUsers } from "../reducers/index";
+import { getPosts } from "../reducers/index";
 import { makeFilteredArray } from "../handlers";
 import PropTypes from "prop-types";
 import "./Posts.css";
@@ -13,29 +10,13 @@ const Posts = (props) => {
 
     const {
         makeSmallPost,
-        filter,
-        handleFilter,
-        handleSorting,
-        handleLogOut,
-        handleLatest
+        filter
     } = props;
 
     const { state } = props;
 
     return (
         <div className="wrapperDiv">
-
-        {/* 
-            <Side
-                posts={getPosts(state)}
-                users={getUsers(state)}
-                loggedIn={getUsers(state).loggedIn}
-                handleLogOut={handleLogOut}
-                handleSorting={handleSorting}
-                handleLatest={handleLatest}
-                handleFilter={handleFilter}  />
-
-        */}
 
             <div className="mainDiv">
                 <Button       

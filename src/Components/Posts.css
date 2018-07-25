@@ -15,3 +15,8 @@
     grid-area: main;
     padding-bottom: var(--welcome-page-grid-gap);
 }
+@media screen and (max-width: 650px) {
+    .wrapperDiv {
+        width: 100%;
+    }
+}

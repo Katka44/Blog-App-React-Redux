@@ -7,7 +7,6 @@ import "./BigPostBody.css";
 const BigPostBody = (props) => {
     const {
         title,
-        category,
         textBeginning,
         textEnd,
         subtitle,
@@ -19,11 +18,17 @@ const BigPostBody = (props) => {
         comments,
         loggedIn,
         displayDate,
-        writtenDate,
-        displayTime
+        writtenDate
     } = props;
 
     const images = importAll(require.context("../assets", false, /.jpg/));
+
+    const makeText = (array) => {
+        const newText = array.map((item, index) => {
+            return <span key={index}>{item}</span>
+        })
+        return newText;
+    }
 
     return (
         <div className="bigPostContentDiv">
@@ -43,9 +48,9 @@ const BigPostBody = (props) => {
                 <p className="titleP">{title}</p>
                 <p className="subtitle">{subtitle}</p>
                 <img src={images[src]} alt={alt}/>
-                <p className="text">{textBeginning}</p>
+                <p className="text">{makeText(textBeginning)}</p>
                 <p className="punchline">"{punchline}"</p>
-                <p className="text">{textEnd}</p>
+                <p className="text">{makeText(textEnd)}</p>
             </div>
             <div className="commentsLikesCount">
                 <i className="far fa-comment"></i>

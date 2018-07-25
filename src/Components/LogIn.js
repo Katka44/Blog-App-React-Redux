@@ -12,7 +12,6 @@ const LogIn = (props) => {
         handleLogIn,
         buttonText,
         goToSignUp,
-        loggedIn,
         signUpLine
     } = props;
 
@@ -33,7 +32,7 @@ const LogIn = (props) => {
                     placeholder="Password"/>
                 <div className="rememberMeDiv">
                     <input type="checkbox" id="rememberMe"/>
-                    <label for="rememberMe">Remember me</label>
+                    <label htmlFor="rememberMe">Remember me</label>
                 </div>
                 
                 <Button   
@@ -47,11 +46,11 @@ const LogIn = (props) => {
             <p className="middle">OR</p>
             <div className="googleFacebookDiv">
                 <div className="googleDiv">
-                    <i class="fab fa-google"></i>
+                    <i className="fab fa-google"></i>
                     <p>Log In with Google</p>
                 </div>
                 <div className="facebookDiv">
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                     <p>Log In with Facebook</p>
                 </div>
             </div>
@@ -67,7 +66,6 @@ LogIn.propTypes = {
     handleLogIn: PropTypes.func,
     buttonText: PropTypes.string,
     goToSignUp: PropTypes.func,
-    loggedIn: PropTypes.string,
     signUpLine: PropTypes.string
 };
 

@@ -5,10 +5,19 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 20px;
     grid-template-areas: 
+    ". addNew"
     "header header"
     "left posts";
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.userPage .addNew {
+    grid-area: addNew;
+    width: 200px;
+    justify-self: end;
+}
+.empty {
+    grid-area: .;
 }
 h3 {
     grid-area: header;
