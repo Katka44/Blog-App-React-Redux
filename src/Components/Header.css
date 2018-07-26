@@ -10,7 +10,24 @@ header {
     "left text text right"
     "bottom bottom bottom bottom";
     font-family: var(--header-font);
-    align-items: center;
+
+}
+.menu {
+    display: none;
+    flex-direction: column;
+}
+.menu a {
+    color: var(--main-bg-color);
+}
+.menu a, .menu p, .menu a p {
+    cursor: pointer;
+    font-size: 1.3em;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+.menu .tagDiv {
+    display: flex;
+    flex-direction: column;
 }
 .menuIconDiv {
     font-size: 2.5em;
@@ -38,7 +55,6 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0;
-    align-items: center;
     font-size: 1.1em;
 }
 .socialTop i {
@@ -64,9 +80,16 @@ header {
     color: var(--main-bg-color);
 }
 .logIn {
+    padding: 10px 0 10px 0;
     cursor: pointer;
     font-size: 1.3em;
     color: var(--main-bg-color);
+}
+.open {
+    display: flex;
+}
+.closed {
+    display: none;
 }
 @media screen and (max-width: 1150px) {
     .navigation p, .logIn {
@@ -77,6 +100,9 @@ header {
     }
     .socialTop i {
         padding: 10px 10px 10px 10px;
+    }
+    .closed {
+        display: none;
     }
 }
 
@@ -96,5 +122,8 @@ header {
     }
     .navigation, .socialTop, .avatar {
         margin-bottom: 0;
+    }
+    .closed {
+        display: none;
     }
 }

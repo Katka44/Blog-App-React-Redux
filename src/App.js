@@ -42,7 +42,8 @@ class App extends Component {
             password: "",
             isEditing: false,
             filter: "none",
-            sorted: "none"
+            sorted: "none",
+            isMenuOpen: false
         }
     }
 
@@ -204,6 +205,7 @@ class App extends Component {
     }
 
     handleFilter = (filter) => {
+        this.closeMenu();
         this.setState({filter});
         this.props.history.push("/blog-live/");
     }
@@ -237,12 +239,14 @@ class App extends Component {
     }
 
     handleSorting = (array, property) => {
+        this.closeMenu();
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
         this.props.history.push("/blog-live/");
     }
 
     handleLatest = (array, property) => {
+        this.closeMenu();
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
         this.props.history.push("/blog-live/");
@@ -279,6 +283,16 @@ class App extends Component {
         };
     }
 
+    handleToggleMenu = () => {
+        this.setState(prevState => ({
+            isMenuOpen: !prevState.isMenuOpen
+        }));
+    }
+
+    closeMenu = () => {
+        this.setState({isMenuOpen: false});
+    }
+
     render() {
         const {
             title,
@@ -292,7 +306,8 @@ class App extends Component {
             username,
             password,
             isEditing,
-            filter
+            filter,
+            isMenuOpen
         } = this.state;
 
         const {
@@ -308,7 +323,9 @@ class App extends Component {
                         handleFilter={this.handleFilter}
                         posts={getPosts(state)}
                         handleLatest={this.handleLatest}
-                        handleSorting={this.handleSorting} />
+                        handleSorting={this.handleSorting} 
+                        isMenuOpen={isMenuOpen}
+                        handleToggleMenu={this.handleToggleMenu} />
      
                     <Route 
                         exact 

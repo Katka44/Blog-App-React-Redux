@@ -13,16 +13,35 @@ const Header = (props) => {
         handleFilter,
         posts,
         handleLatest,
-        handleSorting
+        handleSorting,
+        filter,
+        isMenuOpen,
+        handleToggleMenu
     } =props;
 
     const handleHome = () => {
-        handleFilter("none")
+        handleFilter("none");
     }
     return (
         <header>
-            <div className="menuIconDiv">
-                <i className="fas fa-bars"></i>
+            <div id="menu" className={isMenuOpen ? "menu open" : "menu"}>
+                <Link exact to="/blog-live/"><p onClick={handleHome}>HOME</p></Link>
+                <p 
+                onClick={() => {handleLatest(posts, "writtenDate")}}
+                className="pointer"
+                title="Sort posts" >LATEST</p>
+                <p 
+                    onClick={() => {handleSorting(posts, "comments")}}
+                    className="pointer"
+                    title="Click to sort posts" >MOST COMMENTED</p>
+                <p 
+                    onClick={() => {handleSorting(posts, "likedBy")}}
+                    className="pointer"
+                    title="Click to sort posts" >MOST LIKED</p>
+                <Tags handleFilter={handleFilter} posts={posts} />
+            </div>
+            <div className={isMenuOpen ? "menuIconDiv closed" : "menuIconDiv"}>
+                <i className="fas fa-bars" onClick={handleToggleMenu}></i>
             </div>
             <div className="navigation">
                 <Link exact to="/blog-live/"><p onClick={handleHome}>HOME</p></Link>
@@ -69,7 +88,10 @@ Header.propTypes = {
     handleLogOut: PropTypes.func,
     handleSorting: PropTypes.func,
     handleLatest: PropTypes.func,
-    handleFilter: PropTypes.func
+    handleFilter: PropTypes.func,
+    filter: PropTypes.string, 
+    isMenuOpen: PropTypes.bool,
+    handleToggleMenu: PropTypes.func
 };
 
 export default Header;
