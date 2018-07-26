@@ -90,6 +90,9 @@ input[type="checkbox"]:checked + label:after {
 .googleDiv i, .facebookDiv i {
     width: 36px;
 }
+.filler {
+    min-height: 50vh;
+}
 @media screen and (max-width: 1150px) {
    .loginWrapperDiv {
         grid-template-columns: 1fr;

@@ -70,8 +70,8 @@ const BigPostBody = (props) => {
 BigPostBody.propTypes = {
     title: PropTypes.string,
     category: PropTypes.string,
-    textBeginning: PropTypes.string,
-    textEnd: PropTypes.string,
+    textBeginning: PropTypes.array,
+    textEnd: PropTypes.array,
     subtitle: PropTypes.string,
     src: PropTypes.string,
     alt: PropTypes.string,

@@ -54,6 +54,7 @@ const LogIn = (props) => {
                     <p>Log In with Facebook</p>
                 </div>
             </div>
+            <div className="filler"></div>
         </div>
     );
 }

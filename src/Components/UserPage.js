@@ -28,6 +28,14 @@ const UserPage = (props) => {
         return newArray;
     }
 
+    const howManyPosts = (username, posts) => {
+        const postsArray = posts.filter((object) => {
+            object.author === username;
+        })
+        return postsArray.length;
+    }
+    console.log(howManyPosts("", posts));
+
     return (
         <div className="userPage">
             <p className="empty"></p>
@@ -38,6 +46,7 @@ const UserPage = (props) => {
                 text="Write New Post" />
             {loggedIn === "null" ? <h3>{`${username}'s Posts`}</h3> : username === loggedIn ? <h3>Your Posts</h3> : <h3>{`${username}'s Posts`}</h3>}
             {makeUserPosts(posts)}
+            {howManyPosts(username, posts) === 0 ? <div className="emptyDiv"></div> : <div></div>}
         </div>
     );
 }
