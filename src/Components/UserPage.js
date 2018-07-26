@@ -38,7 +38,6 @@ const UserPage = (props) => {
 
     return (
         <div className="userPage">
-            <p className="empty"></p>
             {((loggedIn !== "null") && (loggedIn === username)) ? <Button       
                 className="addNew"  
                 isLink="true"
