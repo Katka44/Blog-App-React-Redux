@@ -12,6 +12,8 @@ const usersReducer = (store = {users, loggedIn}, action) => {
             };
             if (checkLogin().includes(true)) {
                 return {users: newUsers, loggedIn: action.payload.username};
+            } else {
+                window.alert("Username and password do not match");
             }
             return store;
 

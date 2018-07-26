@@ -11,7 +11,7 @@ form {
     flex-direction: column;
     width: 200px;
 }
-input {
+.inputDiv input {
     min-width: 300px;
 }
 input, textarea {

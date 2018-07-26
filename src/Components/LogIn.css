@@ -17,7 +17,8 @@
     align-self: start;
 }
 .loginDiv input {
-    max-width: 200px;
+    box-sizing:border-box;
+    width: 320px;
 }
 
 input[type="checkbox"] {
@@ -117,5 +118,13 @@ input[type="checkbox"]:checked + label:before {
     input[type="checkbox"]:checked + label:before {
         width: 6px;
         height: 2px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .loginWrapperDiv {
+        width: 100%;
+    }
+    .googleDiv, .facebookDiv, .loginDiv input {
+        width: 80%;
     }
 }

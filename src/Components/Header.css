@@ -99,7 +99,8 @@ header {
         font-size: 1.3em;
     }
     .socialTop i {
-        padding: 10px 10px 10px 10px;
+        padding: 10px 13px 10px 13px;
+        min-width: 20px;
     }
     .closed {
         display: none;
