@@ -38,17 +38,18 @@ input[type="checkbox"] + label:before {
     margin: 0 10px 2px 0;
     text-align: center;    
 }
-input[type="checkbox"]:checked + label:before {
+
+input[type="checkbox"]:checked + label:after {
     content: '';
-    background-color: var(--main-dark-color);
-    border: solid var(--light-grey-color) 1px;
+    transform: rotate(-45deg);
+    border-left: solid var(--main-dark-color) 3px;
+    border-bottom: solid var(--main-dark-color) 3px;
     display: inline-block;
     vertical-align: middle;
-    width: 9px;
-    height: 9px;
+    width: 7px;
+    height: 3px;
     padding: 1px;
-    margin: 0 10px 2px 0;
-    text-align: center;    
+    margin: 0 10px 7px -137px;   
 }
 .middle {
     grid-area: or;
@@ -100,5 +101,17 @@ input[type="checkbox"]:checked + label:before {
     .googleFacebookDiv {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    input[type="checkbox"]:checked + label:after {
+        width: 6px;
+        height: 3px;
+        margin: 0 10px 7px -108px;   
+    }
+}
+@media screen and (max-width: 850px) {
+    input[type="checkbox"]:checked + label:after {
+        width: 6px;
+        height: 3px;
+        margin: 0 10px 7px -100px;   
     }
 }

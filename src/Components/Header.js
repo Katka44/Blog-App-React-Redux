@@ -15,13 +15,17 @@ const Header = (props) => {
         handleLatest,
         handleSorting
     } =props;
+
+    const handleHome = () => {
+        handleFilter("none")
+    }
     return (
         <header>
             <div className="menuIconDiv">
                 <i className="fas fa-bars"></i>
             </div>
             <div className="navigation">
-                <Link exact to="/blog-live/"><p>HOME</p></Link>
+                <Link exact to="/blog-live/"><p onClick={handleHome}>HOME</p></Link>
                 <p>|</p>
                 <p 
                 onClick={() => {handleLatest(posts, "writtenDate")}}

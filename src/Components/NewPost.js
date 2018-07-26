@@ -63,7 +63,7 @@ const NewPost = (props) => {
                 value={textEnd} ></textarea>
 
             <div className="buttonsDiv">
-                {(title.trim() === "" || category.trim() === "" || textBeginning.trim() === "" || textEnd.trim() === "")
+                {(title.trim() === "" || category.trim() === "" || textBeginning.length === 0 || textEnd.length === 0)
                 ? <button 
                 type="button" 
                 onClick={() => window.alert("Please fill all the fields.")}>Save</button>
