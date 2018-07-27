@@ -14,6 +14,7 @@ const UserPage = (props) => {
             if (object.author === username) {
                 return <div className="post"><SmallPost 
                 key={index}
+                id={object.id}
                 index={index}
                 title={object.title}
                 headline={object.headline}
@@ -38,6 +39,7 @@ const UserPage = (props) => {
 
     return (
         <div className="userPage">
+        <p className="left"></p>
             {((loggedIn !== "null") && (loggedIn === username)) ? <Button       
                 className="addNew"  
                 isLink="true"

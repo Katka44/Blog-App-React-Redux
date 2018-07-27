@@ -7,6 +7,7 @@ import "./SmallPost.css";
 const SmallPost = (props) => {
     const {
             index,
+            id,
             title,
             headline,
             category,
@@ -20,7 +21,7 @@ const SmallPost = (props) => {
     const images = importAll(require.context("../assets", false, /.jpg/));
 
     return (
-        <Link className="link" exact to={`/blog-live/posts/${index}`} >
+        <Link className="link" exact to={`/blog-live/posts/${id}`} >
             <img src={images[src]} alt={alt}/>
             <div className="postDiv">
 
@@ -47,6 +48,7 @@ const SmallPost = (props) => {
 
 SmallPost.propTypes = {
     index: PropTypes.number,
+    id: PropTypes.number,
     title: PropTypes.string,
     category: PropTypes.string,
     commentsCount: PropTypes.number,

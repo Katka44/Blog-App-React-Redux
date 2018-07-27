@@ -9,6 +9,7 @@ const postsReducer = (store = posts, action) => {
         case EDIT_POST:
             const newObject = 
                 {
+                    id: action.payload.id,
                     title: action.payload.title,
                     category: action.payload.category,
                     headline: action.payload.headline,

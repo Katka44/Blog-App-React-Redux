@@ -54,6 +54,7 @@ class App extends Component {
             return <SmallPost 
                 key={index}
                 index={index}
+                id={object.id}
                 title={object.title}
                 headline={object.headline}
                 category={object.category}
@@ -168,6 +169,7 @@ class App extends Component {
             ? editPost(
                 {
                     index: index,
+                    id: getPosts(state)[index].id,
                     title: title,
                     category: category,
                     headline: headline,
@@ -185,6 +187,7 @@ class App extends Component {
             )
             : addPost(
                 {
+                    id: state.length,
                     title: title,
                     category: category,
                     headline: headline,
