@@ -8,6 +8,7 @@ Live version: [https://katka44.github.io/blog-live/](https://katka44.github.io/b
 
 ```
 npm install
+
 npm start
 ```
 
@@ -34,6 +35,7 @@ will install all required modules needed to run the app.
 
 ```
 npm start
+
 yarn start
 ```
 
