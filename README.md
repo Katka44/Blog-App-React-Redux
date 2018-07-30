@@ -6,8 +6,10 @@ Live version: [https://katka44.github.io/blog-live/](https://katka44.github.io/b
 
 ## Quick overview
 
-```npm install```
-```npm start```
+```
+npm install
+npm start
+```
 
 Then open [http://localhost:3000/]http://localhost:3000/) to see your app.
 
@@ -17,15 +19,23 @@ These instructions will help you get a copy of the project on your local machine
 
 ### Installation
 
-```npm install```
+```
+npm install
+```
 or
-```yarn```
+
+```
+yarn
+```
+
 will install all required modules needed to run the app.
 
 ## Running the application
 
-```npm start```
-```yarn start```
+```
+npm start
+yarn start
+```
 
 It automatically deploys the app and show it in the browser as [http://localhost:3000/](http://localhost:3000/).
 
