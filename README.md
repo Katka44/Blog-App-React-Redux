@@ -39,7 +39,7 @@ npm start
 yarn start
 ```
 
-It automatically deploys the app and show it in the browser as [http://localhost:3000/](http://localhost:3000/).
+It automatically deploys the app and shows it in the browser as [http://localhost:3000/](http://localhost:3000/).
 
 ## Built With
 
