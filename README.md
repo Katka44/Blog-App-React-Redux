@@ -2,7 +2,7 @@
 
 Blog app made with React and Redux. Sign up and log in with username and password. See all blog posts. See user's profile page. Add, comment, like, sort, edit, delete posts. Filter by category.
 
-Live version: [https://katka44.github.io/blog-live/](https://katka44.github.io/blog-live/)
+Live version: [https://katka44.github.io/Blog-App-React-Redux/](https://katka44.github.io/Blog-App-React-Redux/)
 
 ## Quick overview
 
