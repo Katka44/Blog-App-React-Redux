@@ -17,7 +17,7 @@ const Comment = (props) => {
                 <span> 
                     <Link 
                         exact 
-                        to={`/blog-live/users/${author}`}
+                        to={`/Blog-App-React-Redux/users/${author}`}
                         title={`See ${author}'s profile`}>
                             {author}
                     </Link>

@@ -71,7 +71,7 @@ const NewPost = (props) => {
                 type="button" 
                 onClick={() => handleSave(index)}>Save</button>}
 
-            <button type="button" onClick={handleResetPost}><Link exact to="/blog-live/">Cancel</Link></button>
+            <button type="button" onClick={handleResetPost}><Link exact to="/Blog-App-React-Redux/">Cancel</Link></button>
             </div>
         </form>
     );

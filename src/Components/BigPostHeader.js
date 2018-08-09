@@ -17,7 +17,7 @@ const BigPostHeader = (props) => {
     return (
         <div className="buttonDiv">
             <Button   
-                to="/blog-live/"
+                to="/Blog-App-React-Redux/"
                 type="button"      
                 isLink="true"
                 text="Back"
@@ -25,7 +25,7 @@ const BigPostHeader = (props) => {
 
             {loggedIn === author
                 ? <Button   
-                    to="/blog-live/"
+                    to="/Blog-App-React-Redux/"
                     type="button"      
                     isLink="false"
                     text="Edit Post"
@@ -34,7 +34,7 @@ const BigPostHeader = (props) => {
             }
             {loggedIn === author
                 ? <Button   
-                    to="/blog-live/"
+                    to="/Blog-App-React-Redux/"
                     type="button"      
                     isLink="false"
                     text="Delete Post"

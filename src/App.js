@@ -124,7 +124,7 @@ class App extends Component {
     }
 
     goToSignUp = () => {
-        this.props.history.push("/blog-live/signUp");
+        this.props.history.push("/Blog-App-React-Redux/signUp");
     }
 
     handleSignUp = () => {
@@ -134,7 +134,7 @@ class App extends Component {
                 "password": this.state.password,
                 "favorites": []
             });
-            this.props.history.push("/blog-live/logIn");
+            this.props.history.push("/Blog-App-React-Redux/logIn");
         } else {
             window.alert("Please enter username and password.");
         }
@@ -204,13 +204,13 @@ class App extends Component {
                 }
             )
         this.handleResetPost();
-        this.props.history.push("/blog-live/");
+        this.props.history.push("/Blog-App-React-Redux/");
     }
 
     handleFilter = (filter) => {
         this.closeMenu();
         this.setState({filter});
-        this.props.history.push("/blog-live/");
+        this.props.history.push("/Blog-App-React-Redux/");
     }
 
     handleSort = (array, property) => {
@@ -245,14 +245,14 @@ class App extends Component {
         this.closeMenu();
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
-        this.props.history.push("/blog-live/");
+        this.props.history.push("/Blog-App-React-Redux/");
     }
 
     handleLatest = (array, property) => {
         this.closeMenu();
         const sortedArray = this.handleSort(array, property)
         this.props.sortPosts(sortedArray);
-        this.props.history.push("/blog-live/");
+        this.props.history.push("/Blog-App-React-Redux/");
     }
 
     handleLogIn = () => {
@@ -269,7 +269,7 @@ class App extends Component {
                 }
             );
             this.clearLogin();
-            this.props.history.push("/blog-live/");           
+            this.props.history.push("/Blog-App-React-Redux/");           
         } else {
             window.alert("Please enter username and password.");
         }
@@ -282,7 +282,7 @@ class App extends Component {
     handleDelete = (index, cat) => {
         if (window.confirm("Are you sure?")) {
             this.props.deletePost({index, cat});
-            this.props.history.push("/blog-live/");
+            this.props.history.push("/Blog-App-React-Redux/");
         };
     }
 
@@ -332,7 +332,7 @@ class App extends Component {
      
                     <Route 
                         exact 
-                        path="/blog-live/signUp"
+                        path="/Blog-App-React-Redux/signUp"
 
                         render={()=>{
                             return <LogIn 
@@ -350,7 +350,7 @@ class App extends Component {
 
                     <Route 
                         exact 
-                        path="/blog-live/logIn"
+                        path="/Blog-App-React-Redux/logIn"
 
                         render={()=>{
                             return <LogIn 
@@ -368,7 +368,7 @@ class App extends Component {
 
                     <Route 
                         exact 
-                        path="/blog-live/"
+                        path="/Blog-App-React-Redux/"
 
                         render={()=>{
                             return getUsers(state).loggedIn !== "null"
@@ -397,7 +397,7 @@ class App extends Component {
                         return (<Route 
                             key={getUsers(state).users.indexOf(object)} 
                             exact 
-                            path={`/blog-live/users/${object.username}`}
+                            path={`/Blog-App-React-Redux/users/${object.username}`}
                             render={()=>{ 
                                 return <UserPage 
                                     username={object.username}
@@ -410,7 +410,7 @@ class App extends Component {
 
                     <Route
                         exact 
-                        path = "/blog-live/posts/newpost" 
+                        path = "/Blog-App-React-Redux/posts/newpost" 
                         render = {(props) => 
                             <NewPost 
                                 title={title}
@@ -430,7 +430,7 @@ class App extends Component {
                         return (<Route 
                             key={getPosts(state).indexOf(object)} 
                             exact 
-                            path={`/blog-live/posts/${getPosts(state).indexOf(object)}`} 
+                            path={`/Blog-App-React-Redux/posts/${getPosts(state).indexOf(object)}`} 
                             render={()=>{
                                 return isEditing
                                 ? <NewPost 

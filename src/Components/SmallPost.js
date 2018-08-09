@@ -21,7 +21,7 @@ const SmallPost = (props) => {
     const images = importAll(require.context("../assets", false, /.jpg/));
 
     return (
-        <Link className="link" exact to={`/blog-live/posts/${id}`} >
+        <Link className="link" exact to={`/Blog-App-React-Redux/posts/${id}`} >
             <img src={images[src]} alt={alt}/>
             <div className="postDiv">
 

@@ -43,7 +43,7 @@ const UserPage = (props) => {
             {((loggedIn !== "null") && (loggedIn === username)) ? <Button       
                 className="addNew"  
                 isLink="true"
-                to="/blog-live/posts/newpost"
+                to="/Blog-App-React-Redux/posts/newpost"
                 text="Write New Post" /> : <p></p>}
             
             {loggedIn === "null" ? <h3>{`${username}'s Posts`}</h3> : username === loggedIn ? <h3>Your Posts</h3> : <h3>{`${username}'s Posts`}</h3>}

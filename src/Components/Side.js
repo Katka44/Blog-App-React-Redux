@@ -20,7 +20,7 @@ const Side = (props) => {
     return (
         <div className="sideDiv">
             <div>
-                <p className="username" title={`See your profile`}><Link exact to={`/blog-live/users/${loggedIn}`}>{loggedIn}</Link></p>
+                <p className="username" title={`See your profile`}><Link exact to={`/Blog-App-React-Redux/users/${loggedIn}`}>{loggedIn}</Link></p>
                 <p onClick={handleLogOut} className="pointer" title="Click to log out">Log Out</p>
             </div>
             <div className="postsSideDiv">

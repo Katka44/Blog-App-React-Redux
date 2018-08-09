@@ -22,7 +22,7 @@ const Posts = (props) => {
                 <Button       
                     className="addNew"  
                     isLink="true"
-                    to="/blog-live/posts/newpost"
+                    to="/Blog-App-React-Redux/posts/newpost"
                     text="Write New Post" />
 
                 <div className="postsWrapper">{makeSmallPost(makeFilteredArray(getPosts(state), filter))}</div>

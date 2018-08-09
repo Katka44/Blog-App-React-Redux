@@ -25,7 +25,7 @@ const Header = (props) => {
     return (
         <header>
             <div id="menu" className={isMenuOpen ? "menu open" : "menu"}>
-                <Link exact to="/blog-live/"><p onClick={handleHome}>HOME</p></Link>
+                <Link exact to="/Blog-App-React-Redux/"><p onClick={handleHome}>HOME</p></Link>
                 <p 
                 onClick={() => {handleLatest(posts, "writtenDate")}}
                 className="pointer"
@@ -44,7 +44,7 @@ const Header = (props) => {
                 <i className="fas fa-bars" onClick={handleToggleMenu}></i>
             </div>
             <div className="navigation">
-                <Link exact to="/blog-live/"><p onClick={handleHome}>HOME</p></Link>
+                <Link exact to="/Blog-App-React-Redux/"><p onClick={handleHome}>HOME</p></Link>
                 <p>|</p>
                 <p 
                 onClick={() => {handleLatest(posts, "writtenDate")}}
@@ -73,10 +73,10 @@ const Header = (props) => {
                 
                 {loggedIn !== "null" 
                     ?   <div>
-                        <Link exact to={`/blog-live/users/${loggedIn}`} className="username"><img src={avatar} alt="profile avatar" title={`See your profile`}/></Link>
+                        <Link exact to={`/Blog-App-React-Redux/users/${loggedIn}`} className="username"><img src={avatar} alt="profile avatar" title={`See your profile`}/></Link>
                         <p onClick={handleLogOut} className="pointer logIn">LOG OUT</p> 
                         </div>
-                    :   <Link exact to={`/blog-live/logIn`}><p className="logIn">LOG IN</p></Link>}
+                    :   <Link exact to={`/Blog-App-React-Redux/logIn`}><p className="logIn">LOG IN</p></Link>}
             </div>
         </header>
     );
