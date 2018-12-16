@@ -1,20 +1,33 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = (props) => {
-    return (
-        <footer>
-            <div className="social">
-                <i className="fab fa-facebook-f"></i>
-                <i className="fab fa-twitter"></i>
-                <i className="fab fa-google-plus-g"></i>
-                <i className="fab fa-linkedin-in"></i>
-            </div>
-            <div className="copyright">
-                <small>© 2018 Talking Tech. All rights reserved.</small>
-            </div>
-        </footer>
-    );
-}
+const Footer = props => {
+  const socials = [
+    {
+      className: "fab fa-facebook-f"
+    },
+    {
+      className: "fab fa-twitter"
+    },
+    {
+      className: "fab fa-google-plus-g"
+    },
+    {
+      className: "fab fa-linkedin-in"
+    }
+  ];
+  return (
+    <footer>
+      <div className="social">
+        {socials.map(item => {
+          return <i className={item.className} />;
+        })}
+      </div>
+      <div className="copyright">
+        <small>© 2018 Talking Tech. All rights reserved.</small>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

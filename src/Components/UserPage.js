@@ -5,66 +5,80 @@ import Button from "./Button";
 import PropTypes from "prop-types";
 import "./UserPage.css";
 
-const UserPage = (props) => {
+const UserPage = props => {
+  const { username, posts, loggedIn } = props;
 
-    const { username, posts, loggedIn } = props;
+  const makeUserPosts = array => {
+    const newArray = array.map((object, index) => {
+      if (object.author === username) {
+        return (
+          <div className="post">
+            <SmallPost
+              key={index}
+              id={object.id}
+              index={index}
+              title={object.title}
+              headline={object.headline}
+              category={object.category}
+              commentsCount={object.comments.length}
+              likedBy={object.likedBy}
+              src={object.image}
+              alt={object.alt}
+            />
+          </div>
+        );
+      }
+    });
+    return newArray;
+  };
 
-    const makeUserPosts = (array) => {
-        const newArray = array.map((object, index) => {
-            if (object.author === username) {
-                return <div className="post"><SmallPost 
-                key={index}
-                id={object.id}
-                index={index}
-                title={object.title}
-                headline={object.headline}
-                category={object.category}
-                commentsCount={object.comments.length}
-                likedBy={object.likedBy}
-                src={object.image}
-                alt={object.alt}
-                /></div>
-            }
-        });
-        return newArray;
-    }
+  const howManyPosts = (username, posts) => {
+    const postsArray = posts.filter(object => {
+      object.author === username;
+    });
+    return postsArray.length;
+  };
+  console.log(howManyPosts("", posts));
 
-    const howManyPosts = (username, posts) => {
-        const postsArray = posts.filter((object) => {
-            object.author === username;
-        })
-        return postsArray.length;
-    }
-    console.log(howManyPosts("", posts));
+  return (
+    <div className="userPage">
+      <p className="left" />
+      {loggedIn !== "null" && loggedIn === username ? (
+        <Button
+          className="addNew"
+          isLink="true"
+          to="/Blog-App-React-Redux/posts/newpost"
+          text="Write New Post"
+        />
+      ) : (
+        <p />
+      )}
 
-    return (
-        <div className="userPage">
-        <p className="left"></p>
-            {((loggedIn !== "null") && (loggedIn === username)) ? <Button       
-                className="addNew"  
-                isLink="true"
-                to="/Blog-App-React-Redux/posts/newpost"
-                text="Write New Post" /> : <p></p>}
-            
-            {loggedIn === "null" ? <h3>{`${username}'s Posts`}</h3> : username === loggedIn ? <h3>Your Posts</h3> : <h3>{`${username}'s Posts`}</h3>}
-            {makeUserPosts(posts)}
-            {howManyPosts(username, posts) === 0 ? <div className="emptyDiv"></div> : <div></div>}
-        </div>
-    );
-}
+      {loggedIn === "null" ? (
+        <h3>{`${username}'s Posts`}</h3>
+      ) : username === loggedIn ? (
+        <h3>Your Posts</h3>
+      ) : (
+        <h3>{`${username}'s Posts`}</h3>
+      )}
+      {makeUserPosts(posts)}
+      {howManyPosts(username, posts) === 0 ? (
+        <div className="emptyDiv" />
+      ) : null}
+    </div>
+  );
+};
 
 const mapStateToProps = state => {
-    return {
-        state: state
-    };
+  return {
+    state: state
+  };
 };
 
 UserPage.propTypes = {
-    username: PropTypes.string,
-    posts: PropTypes.array,
-    loggedIn: PropTypes.string
+  username: PropTypes.string,
+  posts: PropTypes.array,
+  loggedIn: PropTypes.string
 };
 
-export default connect(
-    mapStateToProps
-)(UserPage);
+export default connect(mapStateToProps)(UserPage);
